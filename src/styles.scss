@@ -13,8 +13,17 @@
     &.vertical {
         @apply text-center flex-col justify-center 
     }
+
+    &.vertical-reversed {
+        @apply text-center flex-col-reverse justify-center 
+    }
 }
 
-// .font-syne {
-//     font-family: 'Syne Mono', monospace;
-// }
+.border-colors {
+    @apply border-gray-200 dark:border-slate-500
+}
+
+
+.widget {
+    @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer
+}

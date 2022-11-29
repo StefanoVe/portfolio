@@ -1,11 +1,11 @@
-<div class="center vertical h-screen bg-amber-50">
-  <div class="center horizontal w-screen">
-    <div class="w-80">
-      <div
-        class="tracking-wider text-left text-2xl text-slate-700 font-syne left-0 reight-0 w-full relative"
-      >
-        Work in progress{{ waitingDots }}
-      </div>
+<span class="hidden">{{ handleDarkMode() | json }}</span>
+<div [ngClass]="{ dark: darkMode.enabled }">
+  <div
+    class="bg-amber-50 dark:bg-gray-800 dark:text-gray-100 h-screen overflow-hidden w-screen transition-all duration-300"
+  >
+    <div class="right-0 p-4 absolute">
+      <app-toggle-dark-mode></app-toggle-dark-mode>
     </div>
+    <router-outlet></router-outlet>
   </div>
 </div>

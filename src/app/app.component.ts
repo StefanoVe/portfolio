@@ -6,22 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public waitingDots = '';
+  public darkMode: { strategy: 'class' | 'media'; enabled: boolean } = {
+    strategy: 'media',
+    enabled: true,
+  };
 
-  //perpetual timer
-  constructor() {
-    this._timer();
-  }
+  public handleDarkMode() {
+    const hasDarkModeVar = localStorage.getItem('darkMode');
 
-  private _timer() {
-    setTimeout(() => {
-      this.waitingDots += '.';
+    if (!hasDarkModeVar) {
+      return;
+    }
 
-      if (this.waitingDots.length > 3) {
-        this.waitingDots = '';
-      }
+    const isEnabled = hasDarkModeVar === 'true';
+    this.darkMode = {
+      strategy: 'class',
+      enabled: isEnabled,
+    };
 
-      this._timer();
-    }, 500);
+    return this.darkMode;
   }
 }
