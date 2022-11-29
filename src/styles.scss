@@ -20,14 +20,14 @@
 }
 
 .footer {
-    @apply  bottom-0 p-4 dark:bg-gray-600 bg-yellow-500/20 text-gray-500 dark:text-white w-full border-t border-colors;
+    @apply p-4 dark:bg-gray-600 bg-yellow-500/20 text-gray-500 dark:text-white w-full border-t border-colors;
 
     & .footer-header {
-        @apply text-sm;
+        @apply text-xs lg:text-sm;
     }
 
     & .footer-content {
-        @apply text-xs;
+        @apply text-[0.50rem] lg:text-xs ;
     }
 }
 
