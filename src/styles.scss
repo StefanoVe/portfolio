@@ -47,3 +47,9 @@
         @apply h-14 w-14 object-contain rounded-full shadow-md
     }
 }
+
+body{
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
