@@ -1,11 +1,19 @@
 <span class="hidden">{{ handleDarkMode() | json }}</span>
 <div [ngClass]="{ dark: darkMode.enabled }">
+  <div class="right-0 p-4 absolute">
+    <app-toggle-dark-mode></app-toggle-dark-mode>
+  </div>
   <div
-    class="bg-amber-50 dark:bg-gray-800 text-gray-700 dark:text-gray-100 h-screen overflow-hidden w-screen transition-all duration-300"
+    class="bg-amber-50 dark:bg-gray-800 text-gray-700 dark:text-gray-100 overflow-hidden w-screen transition-all duration-300 center vertical h-screen"
   >
-    <div class="right-0 p-4 absolute">
-      <app-toggle-dark-mode></app-toggle-dark-mode>
+    <div class="flex flex-col justify-center h-full">
+      <router-outlet></router-outlet>
     </div>
-    <router-outlet></router-outlet>
+    <div class="footer space-y-2">
+      <div class="footer-header text-end">
+        Developed using Angular 15 and Tailwind CSS 3.2.4
+      </div>
+      <div class="footer-content text-end">Powered by HOSTINGER</div>
+    </div>
   </div>
 </div>

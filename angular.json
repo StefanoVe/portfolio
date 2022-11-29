@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Portfolio": {
+    "portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -16,7 +16,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "architect": {
+      "architect":
+      
+       {
+          "storybook": {
+            "builder": "@storybook/angular:start-storybook",
+            "options": {
+              "browserTarget": "angular-cli:build",
+              "port": 6006
+            }
+          },
+          "build-storybook": {
+            "builder": "@storybook/angular:build-storybook",
+            "options": {
+              "browserTarget": "angular-cli:build"
+            }
+          },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -74,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Portfolio:build:production"
+              "browserTarget": "portfolio:build:production"
             },
             "development": {
-              "browserTarget": "Portfolio:build:development"
+              "browserTarget": "portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Portfolio:build"
+            "browserTarget": "portfolio:build"
           }
         },
         "test": {
@@ -109,7 +124,7 @@
       }
     }
   },
-  "defaultProject": "Portfolio",
+  
   "cli": {
     "analytics": "285ce0f4-93c8-46ab-9e60-9f61b51d5c47"
   }
