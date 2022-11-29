@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {
+      fontFamily: {
+        syne: ["Syne Mono", "sans-serif"],
+      },
       colors: {
         "legio-gold": {
           DEFAULT: "#946C00",
