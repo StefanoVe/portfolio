@@ -2,6 +2,20 @@
  @apply transition-all duration-300 ease-in-out   
 }
 
+.horizontal-flip {
+    --tw-scale-x: -1;    
+}
+.img-container {
+    @apply  h-80 group-hover/404:scale-150 group-hover/404:translate-y-20 animated z-50 outline-0 ring-0 border-none group-focus/404:duration-[300ms] group-focus/404:opacity-0 transform-gpu
+}
+.blob-img {
+ @apply   transform-gpu animated blob  w-full  absolute   
+}
+
+
+.testclass{
+    @apply bg-red-500
+}
 
 
 .blob {
@@ -9,8 +23,8 @@
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
-    animation: blob 5s linear infinite;
+    
+    animation: blob 10s linear infinite;
     
   }
 
@@ -27,6 +41,10 @@
 
     66% {
         border-radius:
-            100% 56% 56% 100% / 100% 100% 56% 56%;
+            100% 26% 56% 100% / 100% 100% 56% 56%;
     }
+}
+
+.blob-ring {
+    @apply blob w-full border absolute -top-10 group-hover/404:w-10 group-hover/404:h-10 animated transform-gpu outline-none right-0 
 }
