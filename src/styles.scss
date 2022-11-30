@@ -19,17 +19,7 @@
     }
 }
 
-.footer {
-    @apply p-4 dark:bg-gray-600 bg-yellow-500/20 text-gray-500 dark:text-white w-full border-t border-colors hidden md:block;
 
-    & .footer-header {
-        @apply text-xs lg:text-sm;
-    }
-
-    & .footer-content {
-        @apply text-[0.50rem] lg:text-xs ;
-    }
-}
 
 .border-colors {
     @apply border-gray-200 dark:border-slate-500
@@ -48,8 +38,47 @@
     }
 }
 
+.horizontal-flip {
+    --tw-scale-x: -1;    
+}
+
 body{
     width:100%;
     overflow-x:hidden;
     overflow-y:hidden;
 }
+
+.blob {
+    overflow: hidden;
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    background-size: cover;
+    background-position: center;
+    
+    animation: blob 10s linear infinite;
+    
+  }
+
+  @keyframes blob {
+    0%, 100% {
+        border-radius:
+            42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+
+    33% {
+        border-radius:
+            42% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+
+    66% {
+        border-radius:
+            100% 26% 56% 100% / 100% 100% 56% 56%;
+    }
+}
+
+.blob-ring {
+    @apply blob w-full border absolute  group-hover/404:w-10 group-hover/404:h-10 transition-all duration-300 ease-in-out    transform-gpu outline-none right-0    border-gray-400
+}
+
+.smooth {
+    @apply transition-all duration-300 ease-in-out   
+   }

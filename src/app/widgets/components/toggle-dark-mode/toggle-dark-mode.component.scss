@@ -12,3 +12,8 @@
 {
     @apply opacity-0 absolute -translate-x-2
 }
+
+
+.button-border {
+ @apply   h-full z-50 pointer-events-none dark:shadow 
+}

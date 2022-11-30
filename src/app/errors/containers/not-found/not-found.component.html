@@ -2,7 +2,7 @@
   <div class="group/404 cursor-pointer" routerLink="/">
     <div class="img-container w-[28rem]">
       <img
-        class="blob-img group-hover/404:opacity-0 h-80"
+        class="blob blob-img group-hover/404:opacity-0 h-80"
         src="/assets/AI/404-1.png"
       />
       <img
@@ -11,13 +11,20 @@
           opacity-0
           h-full
           horizontal-flip
-          blob-img
+          blob blob-img
         "
         src="/assets/AI/404-2.png"
       />
-      <div class="blob-ring border-colors h-[26rem] w-[30rem]"></div>
+      <div class="blob-ring border-colors h-[26rem] w-[30rem] -top-10"></div>
       <div
-        class="blob-ring border-colors h-96 w-[30rem] scale-x-[-1] scale-y-[-1]"
+        class="
+          blob-ring
+          border-colors
+          h-96
+          w-[30rem]
+          scale-x-[-1] scale-y-[-1]
+          -top-10
+        "
       ></div>
       <div
         class="
@@ -29,7 +36,7 @@
           lg:block
           lg:opacity-0
           group-hover/404:opacity-100
-          animated
+          smooth
           translate-x-20
           group-hover/404:translate-x-0
           cursor-pointer
@@ -39,7 +46,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
-            class="h-6 w-6 text-current hover:rotate-[315deg] animated"
+            class="h-6 w-6 text-current hover:rotate-[315deg] smooth"
             viewBox="0 0 24 24"
           >
             <path
@@ -50,7 +57,7 @@
       </div>
     </div>
 
-    <div class="sticky z-10 group-hover/404:translate-y-8 animated">
+    <div class="sticky z-10 group-hover/404:translate-y-8 smooth">
       <h1
         class="
           group-hover/404:text-8xl
@@ -61,7 +68,7 @@
           from-purple-600
           to-red-600
           tracking-widest
-          animated
+          smooth
           group-hover/404:opacity-0 group-hover/404:-translate-y-20
           rotate-[6deg]
         "
@@ -72,7 +79,7 @@
         <div class="sticky">
           <span
             class="
-              animated
+              smooth
               group-hover/404:opacity-0
               drop-shadow-md
               group-hover/404:scale-90
@@ -86,7 +93,7 @@
           >
           <span
             class="
-              animated
+              smooth
               opacity-0
               group-hover/404:opacity-100 group-hover/404:text-3xl
               absolute
