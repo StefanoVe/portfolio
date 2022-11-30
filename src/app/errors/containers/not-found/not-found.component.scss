@@ -4,7 +4,7 @@
 
 
 .img-container {
-    @apply  h-80 group-hover/404:scale-150 group-hover/404:translate-y-20 smooth z-50 outline-0 ring-0 border-none group-focus/404:duration-[300ms] group-focus/404:opacity-0 transform-gpu p-4
+    @apply  h-80 group-hover/404:scale-150 smooth z-50 outline-0 ring-0 border-none group-focus/404:duration-[300ms] group-focus/404:opacity-0 transform-gpu p-4
 }
 .blob-img {
  @apply   transform-gpu smooth w-full  absolute   

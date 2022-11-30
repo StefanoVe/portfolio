@@ -2,12 +2,12 @@
   <div class="group/404 cursor-pointer" routerLink="/">
     <div class="img-container w-[28rem]">
       <img
-        class="blob blob-img group-hover/404:opacity-0 h-80"
+        class="blob blob-img group-hover/404:opacity-0 opacity-80 h-80"
         src="/assets/AI/404-1.png"
       />
       <img
         class="
-          group-hover/404:opacity-100
+          group-hover/404:opacity-80
           opacity-0
           h-full
           horizontal-flip
@@ -15,7 +15,16 @@
         "
         src="/assets/AI/404-2.png"
       />
-      <div class="blob-ring border-colors h-[26rem] w-[30rem] -top-10"></div>
+      <div
+        class="
+          blob-ring
+          border-colors
+          h-[26rem]
+          w-[30rem]
+          -top-10
+          group-hover/404:w-10 group-hover/404:h-10
+        "
+      ></div>
       <div
         class="
           blob-ring
@@ -24,6 +33,10 @@
           w-[30rem]
           scale-x-[-1] scale-y-[-1]
           -top-10
+          backdrop-brightness-90
+          dark:backdrop-brightness-125
+          -z-10
+          group-hover/404:w-10 group-hover/404:h-10
         "
       ></div>
       <div
@@ -91,19 +104,31 @@
           >
             Are you lost?</span
           >
-          <span
-            class="
-              smooth
-              opacity-0
-              group-hover/404:opacity-100 group-hover/404:text-3xl
-              absolute
-              left-0
-              right-0
-              group-hover/404:translate-y-20
-            "
-          >
-            Wanna go home?</span
-          >
+          <div class="relative">
+            <span
+              class="
+                smooth
+                opacity-0
+                group-hover/404:opacity-100 group-hover/404:text-3xl
+                absolute
+                left-0
+                right-0
+              "
+            >
+              Do you wanna go home ?</span
+            >
+            <div class="center horizontal w-full relative -z-10">
+              <div
+                class="
+                  blob-ring
+                  h-24
+                  group-hover/404:opacity-0
+                  -top-10
+                  backdrop-blur
+                "
+              ></div>
+            </div>
+          </div>
         </div>
       </h2>
     </div>

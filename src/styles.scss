@@ -76,7 +76,7 @@ body{
 }
 
 .blob-ring {
-    @apply blob w-full border absolute  group-hover/404:w-10 group-hover/404:h-10 transition-all duration-300 ease-in-out    transform-gpu outline-none right-0    border-gray-400
+    @apply blob w-full border absolute transition-all duration-300 ease-in-out    transform-gpu outline-none right-0    border-gray-400
 }
 
 .smooth {
