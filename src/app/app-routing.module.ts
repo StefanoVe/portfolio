@@ -7,6 +7,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),
   },
+  {
+    path: '**',
+    redirectTo: '/errors/404',
+    pathMatch: 'full',
+  },
+  {
+    path: 'errors',
+    loadChildren: () =>
+      import('./errors/errors.module').then((m) => m.ErrorsModule),
+  },
 ];
 
 @NgModule({
