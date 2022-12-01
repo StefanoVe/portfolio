@@ -4,18 +4,14 @@
 @tailwind utilities;
 
 .center {
-    @apply flex;
-    &.horizontal {
-        @apply text-center justify-center
-
-    }
+    @apply flex text-center justify-center;
 
     &.vertical {
-        @apply text-center flex-col justify-center 
+        @apply  flex-col 
     }
 
     &.vertical-reversed {
-        @apply text-center flex-col-reverse justify-center 
+        @apply  flex-col-reverse 
     }
 }
 
