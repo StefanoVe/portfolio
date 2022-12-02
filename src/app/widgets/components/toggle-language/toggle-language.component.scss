@@ -1,7 +1,4 @@
-.toggle-button
-{
-    @apply rounded-lg p-2 flex space-x-1 cursor-pointer 
-}
+
 
 .svg-icon
 {
@@ -16,4 +13,9 @@
 
 .button-border {
  @apply   h-full z-50 pointer-events-none dark:shadow 
+}
+
+.toggle-button
+{
+    @apply rounded-lg px-2 py-1 flex cursor-pointer bg-transparent group-hover/toggleld:scale-125 text-2xl
 }

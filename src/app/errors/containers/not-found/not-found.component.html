@@ -3,7 +3,7 @@
     <div class="img-container w-[28rem]">
       <img
         class="blob blob-img group-hover/404:opacity-0 opacity-80 h-80"
-        src="/assets/AI/404-1.png"
+        src="/assets/AI/404-1.webp"
       />
       <img
         class="
@@ -13,11 +13,12 @@
           horizontal-flip
           blob blob-img
         "
-        src="/assets/AI/404-2.png"
+        src="/assets/AI/404-2.webp"
       />
       <div
         class="
-          blob-ring
+          blob
+          ring
           border-colors
           h-[26rem]
           w-[30rem]
@@ -27,7 +28,8 @@
       ></div>
       <div
         class="
-          blob-ring
+          blob
+          ring
           border-colors
           h-96
           w-[30rem]
@@ -102,7 +104,7 @@
               rotate-[6deg]
             "
           >
-            Are you lost?</span
+            {{ notFoundTxt() }}</span
           >
           <div class="relative">
             <span
@@ -115,12 +117,13 @@
                 right-0
               "
             >
-              Do you wanna go home ?</span
+              {{ wannaGoHomeTxt() }}</span
             >
-            <div class="center horizontal w-full relative -z-10">
+            <div class="center w-full relative -z-10">
               <div
                 class="
-                  blob-ring
+                  blob
+                  ring
                   h-24
                   group-hover/404:opacity-0
                   -top-10

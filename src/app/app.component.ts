@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
     strategy: 'media',
     enabled: true,
   };
+
+  constructor(private _lang: LanguageService) {}
 
   public handleDarkMode() {
     const hasDarkModeVar = localStorage.getItem('darkMode');
@@ -25,5 +28,33 @@ export class AppComponent {
     };
 
     return this.darkMode;
+  }
+
+  public footerTopLeftTxt() {
+    return this._lang._languageSensitiveText({
+      en: 'Check out the project on Github',
+      it: 'Guarda il progetto su Github',
+    });
+  }
+
+  public footerTopRightTxt() {
+    return this._lang._languageSensitiveText({
+      en: ' Developed using Angular 15 and Tailwind CSS 3.2.4 ',
+      it: 'Sviluppato con Angular 15 e Tailwind CSS 3.2.4',
+    });
+  }
+
+  public footerBottomLeftTxt() {
+    return this._lang._languageSensitiveText({
+      en: 'Images created with Midjourney AI',
+      it: 'Immagini create con Midjourney AI',
+    });
+  }
+
+  public footerBottomRightTxt() {
+    return this._lang._languageSensitiveText({
+      en: 'Powered by HOSTINGER',
+      it: 'Alimentato da HOSTINGER',
+    });
   }
 }

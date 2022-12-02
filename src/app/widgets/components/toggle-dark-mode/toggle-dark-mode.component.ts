@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-toggle-dark-mode',
@@ -7,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ToggleDarkModeComponent {
   @Input() showLabel = true;
+
+  constructor(private _lang: LanguageService) {}
 
   public handleDarkMode() {
     const darkModeGetter = localStorage.getItem('darkMode');
@@ -26,5 +29,18 @@ export class ToggleDarkModeComponent {
     }
 
     return darkModeGetter === 'true';
+  }
+
+  public darkModeTxt() {
+    return this._lang._languageSensitiveText({
+      en: 'Nighttime',
+      it: 'Notte',
+    });
+  }
+  public lightModeTxt() {
+    return this._lang._languageSensitiveText({
+      en: 'Daytime',
+      it: 'Giorno',
+    });
   }
 }

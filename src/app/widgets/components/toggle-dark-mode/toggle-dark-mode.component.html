@@ -1,7 +1,8 @@
 <div class="w-fit h-10 relative m-10 px-2 group/toggleld">
   <div
     class="
-      blob-ring
+      blob
+      ring
       button-border
       scale-150
       group-hover/toggleld:scale-[1.8] group-hover/toggleld:rotate-[6deg]
@@ -9,7 +10,8 @@
   ></div>
   <div
     class="
-      blob-ring
+      blob
+      ring
       button-border
       group-hover/toggleld:scale-150
       scale-x-[-1]
@@ -18,15 +20,15 @@
     "
   ></div>
   <div
-    class="blob-ring button-border group-hover/toggleld:scale-125 delay-75"
+    class="blob ring button-border group-hover/toggleld:scale-125 delay-75"
   ></div>
   <div
-    class="blob-ring button-border group-hover/toggleld:scale-120 delay-150"
+    class="blob ring button-border group-hover/toggleld:scale-120 delay-150"
   ></div>
 
   <button
     class="
-      dark-mode-button
+      toggle-button
       bg-transparent
       text-slate-700
       dark:text-white
@@ -61,7 +63,7 @@
       />
     </svg>
     <span class="text-xs text-gray-700 dark:text-white my-auto font-syne">{{
-      isDarkModeChecked() ? "Daytime" : "Nighttime"
+      isDarkModeChecked() ? lightModeTxt() : darkModeTxt()
     }}</span>
   </button>
 </div>

@@ -1,0 +1,34 @@
+<div class="w-fit h-10 relative m-10 px-2 group/toggleld">
+  <div
+    class="
+      blob
+      ring
+      button-border
+      scale-150
+      group-hover/toggleld:scale-[1.8] group-hover/toggleld:rotate-[6deg]
+    "
+  ></div>
+  <div
+    class="
+      blob
+      ring
+      button-border
+      group-hover/toggleld:scale-150
+      scale-x-[-1]
+      group-hover/toggleld:scale-x-[-1]
+      delay-75
+    "
+  ></div>
+  <div
+    class="blob ring button-border group-hover/toggleld:scale-125 delay-75"
+  ></div>
+  <div
+    class="blob ring button-border group-hover/toggleld:scale-120 delay-150"
+  ></div>
+
+  <button class="toggle-button smooth" (click)="toggleLanguage()">
+    <div>
+      {{ languageEemoji[language] }}
+    </div>
+  </button>
+</div>

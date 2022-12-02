@@ -35,24 +35,23 @@
 }
 
 .horizontal-flip {
-    --tw-scale-x: -1;    
+ --tw-scale-x: -1;
 }
+.smooth {
+    @apply transition-all duration-300 ease-in-out   
+   }
 
-// body{
-//     width:100%;
-//     overflow-x:hidden;
-//     overflow-y:hidden;
-// }
+
 
 .blob {
-    overflow: hidden;
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-    background-size: cover;
-    background-position: center;
-    
     animation: blob 10s linear infinite;
+    @apply overflow-hidden bg-center bg-cover;
     
+  &.ring {
+    @apply w-full border absolute transition-all duration-300 ease-in-out transform-gpu outline-none right-0 border-gray-400 ring-0
   }
+}
 
   @keyframes blob {
     0%, 100% {
@@ -71,10 +70,3 @@
     }
 }
 
-.blob-ring {
-    @apply blob w-full border absolute transition-all duration-300 ease-in-out    transform-gpu outline-none right-0    border-gray-400
-}
-
-.smooth {
-    @apply transition-all duration-300 ease-in-out   
-   }
