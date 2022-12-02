@@ -23,15 +23,17 @@
 
 
 .widget {
-    @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer bg-white/50 dark:bg-slate-500/20 p-2 transition-all ease-in-out hover:scale-95 duration-200 hover:brightness-95 dark:hover:brightness-150 border border-colors backdrop-blur-3xl;
+    @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer bg-white/20 dark:bg-slate-500/20 p-2 transition-all ease-in-out hover:scale-95 duration-200 hover:brightness-95 dark:hover:brightness-150 border border-colors backdrop-blur-3xl dark:backdrop-brightness-90;
 
     & .logo {
         @apply object-contain h-7 mt-4
     }
 
     & .pfp {
-        @apply h-14 w-14 object-contain rounded-full shadow-md
+        @apply h-14 w-14 object-contain rounded-full shadow-md blob
     }
+
+    
 }
 
 .horizontal-flip {
@@ -52,8 +54,8 @@
     animation: blob 10s linear infinite;
     @apply overflow-hidden bg-center bg-cover;
     
-  &.ring {
-    @apply w-full border absolute transition-all duration-300 ease-in-out transform-gpu outline-none right-0 border-gray-400 ring-0
+  &.blob-ring {
+    @apply w-full border absolute transition-all duration-300 ease-in-out transform-gpu outline-none right-0 border-gray-400 
   }
 }
 
