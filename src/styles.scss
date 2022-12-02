@@ -23,7 +23,7 @@
 
 
 .widget {
-    @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer bg-white dark:bg-slate-500/20 p-2 transition-all ease-in-out hover:scale-95 duration-200 hover:brightness-95 dark:hover:brightness-150 border border-colors backdrop-blur-sm;
+    @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer bg-white/50 dark:bg-slate-500/20 p-2 transition-all ease-in-out hover:scale-95 duration-200 hover:brightness-95 dark:hover:brightness-150 border border-colors backdrop-blur-3xl;
 
     & .logo {
         @apply object-contain h-7 mt-4
@@ -37,11 +37,15 @@
 .horizontal-flip {
  --tw-scale-x: -1;
 }
+
+
 .smooth {
     @apply transition-all duration-300 ease-in-out   
-   }
+}
 
-
+.default-background {
+    @apply bg-gray-50 dark:bg-gray-800
+}
 
 .blob {
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
