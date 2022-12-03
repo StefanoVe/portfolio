@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         syne: ["Syne Mono", "sans-serif"],
+        amatic: ["Amatic SC", "cursive"],
+        "mono-display": ["Major Mono Display", "monospace"],
       },
       colors: {
         "legio-gold": {

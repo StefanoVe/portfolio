@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Amatic+SC&family=Major+Mono+Display&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,7 +30,7 @@
     }
 
     & .pfp {
-        @apply h-14 w-14 object-contain rounded-full shadow-md blob
+        @apply h-14 w-14 object-contain rounded-full shadow-md
     }
 
     
@@ -51,7 +51,7 @@
 
 .blob {
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-    animation: blob 10s linear infinite;
+    animation: blob 9s linear infinite;
     @apply overflow-hidden bg-center bg-cover;
     
   &.blob-ring {
