@@ -1,0 +1,79 @@
+<div class="w-screen h-full relative">
+  <div class="absolute h-[20rem] w-[30rem] left-20">
+    <div class="flex h-full">
+      <div class="center vertical">
+        <ul
+          class="nav smooth"
+          *ngFor="let item of navItems; let $value = index"
+        >
+          <li
+            class="nav-option smooth group/nav-option"
+            [routerLink]="item.routerPath"
+            routerLinkActive="active smooth"
+            [ngStyle]="{
+              transform: 'translateX(-' + handleRotation($value) + 'px)'
+            }"
+          >
+            <div
+              class="
+                blob blob-ring
+                h-0
+                w-full
+                group-hover/nav-option:h-full
+                smooth
+                bottom-0
+                delay-150
+              "
+            ></div>
+            <div
+              class="
+                blob blob-ring
+                h-0
+                w-full
+                group-hover/nav-option:h-full
+                bottom-0
+                smooth
+                scale-110
+                delay-150
+                horizontal-flip
+                scale-y-[-1]
+              "
+            ></div>
+            <div
+              class="
+                blob blob-ring
+                h-0
+                w-full
+                group-hover/nav-option:h-full
+                group-hover/nav-option:rotate-[5deg]
+                bottom-0
+                smooth
+                scale-110
+                horizontal-flip
+              "
+            ></div>
+            <div
+              class="
+                blob blob-ring
+                h-0
+                w-full
+                group-hover/nav-option:h-full
+                group-hover/nav-option:rotate-[-5deg]
+                bottom-0
+                smooth
+                scale-110
+              "
+            ></div>
+            <!-- <div
+              class="blob blob-ring h-0 w-full bottom-0 smooth scale-110"
+            ></div> -->
+            {{ item.label }}
+          </li>
+        </ul>
+      </div>
+      <div class="h-full w-full p-4 relative">
+        <div class="blob blob-ring h-full w-full"></div>
+      </div>
+    </div>
+  </div>
+</div>

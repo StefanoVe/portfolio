@@ -2,20 +2,69 @@
 <main class="w-full center vertical items-center font-syne">
   <div class="group/404 cursor-pointer" routerLink="/">
     <div class="img-container w-[28rem]">
-      <img
-        class="blob blob-img group-hover/404:opacity-0 opacity-80 h-80"
-        src="/assets/AI/404-1.webp"
-      />
-      <img
-        class="
-          group-hover/404:opacity-80
-          opacity-0
-          h-full
-          horizontal-flip
-          blob blob-img
-        "
-        src="/assets/AI/404-2.webp"
-      />
+      <div class="sticky z-10 group-hover/404:translate-y-8 smooth">
+        <h1
+          class="
+            group-hover/404:text-8xl
+            text-9xl
+            font-extrabold
+            text-transparent
+            bg-clip-text bg-gradient-to-r
+            from-purple-600
+            to-red-600
+            tracking-widest
+            smooth
+            group-hover/404:opacity-0 group-hover/404:-translate-y-20
+            rotate-[6deg]
+          "
+        >
+          <span>404</span>
+        </h1>
+        <h2 class="font-medium tracking-widest text-center">
+          <div class="sticky">
+            <span
+              class="
+                smooth
+                group-hover/404:opacity-0
+                drop-shadow-md
+                group-hover/404:scale-90
+                absolute
+                left-0
+                right-0
+                rotate-[6deg]
+              "
+            >
+              {{ notFoundTxt() }}</span
+            >
+            <div class="relative">
+              <span
+                class="
+                  smooth
+                  opacity-0
+                  group-hover/404:opacity-100 group-hover/404:text-3xl
+                  absolute
+                  left-0
+                  right-0
+                  backdrop-blur
+                "
+              >
+                {{ wannaGoHomeTxt() }}</span
+              >
+              <div class="center w-full relative -z-10">
+                <div
+                  class="
+                    blob blob-ring
+                    h-24
+                    group-hover/404:opacity-0
+                    -top-10
+                    backdrop-blur
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </h2>
+      </div>
       <div
         class="
           blob blob-ring
@@ -60,7 +109,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
-            class="h-6 w-6 text-current hover:rotate-[315deg] smooth"
+            class="h-6 w-6 text-current hover:rotate-[315deg] smooth text-white"
             viewBox="0 0 24 24"
           >
             <path
@@ -69,69 +118,6 @@
           </svg>
         </a>
       </div>
-    </div>
-
-    <div class="sticky z-10 group-hover/404:translate-y-8 smooth">
-      <h1
-        class="
-          group-hover/404:text-8xl
-          text-9xl
-          font-extrabold
-          text-transparent
-          bg-clip-text bg-gradient-to-r
-          from-purple-600
-          to-red-600
-          tracking-widest
-          smooth
-          group-hover/404:opacity-0 group-hover/404:-translate-y-20
-          rotate-[6deg]
-        "
-      >
-        <span>404</span>
-      </h1>
-      <h2 class="font-medium tracking-widest text-center">
-        <div class="sticky">
-          <span
-            class="
-              smooth
-              group-hover/404:opacity-0
-              drop-shadow-md
-              group-hover/404:scale-90
-              absolute
-              left-0
-              right-0
-              rotate-[6deg]
-            "
-          >
-            {{ notFoundTxt() }}</span
-          >
-          <div class="relative">
-            <span
-              class="
-                smooth
-                opacity-0
-                group-hover/404:opacity-100 group-hover/404:text-3xl
-                absolute
-                left-0
-                right-0
-              "
-            >
-              {{ wannaGoHomeTxt() }}</span
-            >
-            <div class="center w-full relative -z-10">
-              <div
-                class="
-                  blob blob-ring
-                  h-24
-                  group-hover/404:opacity-0
-                  -top-10
-                  backdrop-blur
-                "
-              ></div>
-            </div>
-          </div>
-        </div>
-      </h2>
     </div>
   </div>
 </main>

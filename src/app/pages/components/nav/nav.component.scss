@@ -1,0 +1,14 @@
+.nav {
+    
+    @apply font-mono-display text-2xl text-right text-white ;
+
+    & .nav-option {
+        @apply translate-x-0 hover:brightness-[8] whitespace-nowrap my-2 cursor-pointer px-4  ;
+
+      
+    }
+}
+
+.active {
+    @apply scale-110 -translate-x-20  whitespace-nowrap my-2 cursor-pointer  pointer-events-none uppercase;
+}

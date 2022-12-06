@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ErrorsModule } from './errors/errors.module';
+import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { WidgetsModule } from './widgets/widgets.module';
 
@@ -15,6 +16,7 @@ import { WidgetsModule } from './widgets/widgets.module';
     WidgetsModule,
     ErrorsModule,
     SharedModule,
+    PagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
