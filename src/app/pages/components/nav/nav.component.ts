@@ -1,35 +1,64 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil, tap } from 'rxjs';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent {
-  public navItems: { label: string; routerPath: string }[] = [
-    {
-      label: 'Home',
-      routerPath: '/landing',
-    },
-    {
-      label: 'About me',
-      routerPath: '/about',
-    },
-    {
-      label: 'Projects',
-      routerPath: '/projects',
-    },
-    {
-      label: 'Resume',
-      routerPath: '/resume',
-    },
-    {
-      label: 'Contacts',
-      routerPath: '/contacts',
-    },
-  ];
+export class NavComponent implements OnInit, OnDestroy {
+  public navItems: { label: string; routerPath: string }[] = [];
 
-  constructor() {}
+  private destroy$ = new Subject<void>();
+
+  constructor(private lang: LanguageService) {}
+
+  ngOnInit(): void {
+    this.lang.languageChanges
+      .pipe(
+        takeUntil(this.destroy$),
+        tap(
+          () =>
+            (this.navItems = [
+              {
+                label: this.lang._languageSensitiveText({
+                  en: 'About',
+                  it: 'Su di me',
+                }),
+                routerPath: '/about',
+              },
+              {
+                label: this.lang._languageSensitiveText({
+                  en: 'Projects',
+                  it: 'Progetti',
+                }),
+                routerPath: '/projects',
+              },
+              {
+                label: this.lang._languageSensitiveText({
+                  en: 'Resume',
+                  it: 'Curriculum',
+                }),
+                routerPath: '/resume',
+              },
+              {
+                label: this.lang._languageSensitiveText({
+                  en: 'Contacts',
+                  it: 'Contatti',
+                }),
+                routerPath: '/contacts',
+              },
+            ])
+        )
+      )
+      .subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
   public handleRotation(index: number) {
     //a formula that applies an amount of spacing to each item in the nav to create a rotation effect
@@ -47,16 +76,23 @@ export class NavComponent {
 
     const totalItems = this.navItems.length;
     const halfItems = Math.floor(totalItems / 2);
-    const rotation = 15;
+    const rotation = 30;
 
     if (index === 0 || index === totalItems - 1) {
       return 0;
     }
 
-    if (index > halfItems) {
-      return (index - halfItems) * rotation;
+    if (index >= halfItems) {
+      return (index + 1 - halfItems) * rotation;
     }
 
     return index * rotation;
+  }
+
+  public homeTxt() {
+    return this.lang._languageSensitiveText({
+      en: 'Home',
+      it: 'Home',
+    });
   }
 }

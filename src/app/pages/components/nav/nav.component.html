@@ -1,5 +1,7 @@
 <div class="w-screen h-full relative">
-  <div class="absolute h-[20rem] w-[30rem] left-20">
+  <div
+    class="absolute h-[20rem] w-[30rem] left-20 hover:-translate-x-10 smooth"
+  >
     <div class="flex h-full">
       <div class="center vertical">
         <ul
@@ -14,66 +16,94 @@
               transform: 'translateX(-' + handleRotation($value) + 'px)'
             }"
           >
-            <div
-              class="
-                blob blob-ring
-                h-0
-                w-full
-                group-hover/nav-option:h-full
-                smooth
-                bottom-0
-                delay-150
-              "
-            ></div>
-            <div
-              class="
-                blob blob-ring
-                h-0
-                w-full
-                group-hover/nav-option:h-full
-                bottom-0
-                smooth
-                scale-110
-                delay-150
-                horizontal-flip
-                scale-y-[-1]
-              "
-            ></div>
-            <div
-              class="
-                blob blob-ring
-                h-0
-                w-full
-                group-hover/nav-option:h-full
-                group-hover/nav-option:rotate-[5deg]
-                bottom-0
-                smooth
-                scale-110
-                horizontal-flip
-              "
-            ></div>
-            <div
-              class="
-                blob blob-ring
-                h-0
-                w-full
-                group-hover/nav-option:h-full
-                group-hover/nav-option:rotate-[-5deg]
-                bottom-0
-                smooth
-                scale-110
-              "
-            ></div>
-            <!-- <div
-              class="blob blob-ring h-0 w-full bottom-0 smooth scale-110"
-            ></div> -->
+            <ng-container [ngTemplateOutlet]="navHover"></ng-container>
             {{ item.label }}
           </li>
         </ul>
       </div>
-      <div class="h-full w-full p-4 relative">
-        <div class="blob blob-ring h-full w-full"></div>
+
+      <div class="h-full w-full p-4 relative group/earth">
+        <img
+          routerLink="/landing"
+          routerLinkActive="earth-active"
+          src="/assets/AI/earth.webp"
+          class="
+            blob
+            h-full
+            w-full
+            object-cover
+            bg-white/10
+            group-hover/earth:translate-x-[-4rem]
+            smooth
+            cursor-pointer
+          "
+        />
+        <span
+          class="
+            absolute
+            font-mono
+            text-lg
+            opacity-0
+            tracking-wider
+            group-hover/earth:translate-x-[-5rem] group-hover/earth:opacity-100
+            smooth
+          "
+          >{{ homeTxt() }}</span
+        >
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #navHover>
+  <div class="m-5">
+    <div
+      class="
+        blob blob-ring
+        h-0
+        w-full
+        group-hover/nav-option:h-full
+        smooth
+        bottom-0
+        delay-150
+      "
+    ></div>
+    <div
+      class="
+        blob blob-ring
+        h-0
+        w-full
+        group-hover/nav-option:h-full
+        bottom-0
+        smooth
+        scale-110
+        delay-150
+        horizontal-flip
+        scale-y-[-1]
+      "
+    ></div>
+    <div
+      class="
+        blob blob-ring
+        h-0
+        w-full
+        group-hover/nav-option:h-full group-hover/nav-option:rotate-[5deg]
+        bottom-0
+        smooth
+        scale-110
+        horizontal-flip
+      "
+    ></div>
+    <div
+      class="
+        blob blob-ring
+        h-0
+        w-full
+        group-hover/nav-option:h-full group-hover/nav-option:rotate-[-5deg]
+        bottom-0
+        smooth
+        scale-110
+      "
+    ></div>
+  </div>
+</ng-template>

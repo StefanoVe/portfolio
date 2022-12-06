@@ -10,5 +10,10 @@
 }
 
 .active {
-    @apply scale-110 -translate-x-20  whitespace-nowrap my-2 cursor-pointer  pointer-events-none uppercase;
+    @apply   whitespace-nowrap my-2 cursor-pointer  pointer-events-none uppercase ;
+}
+
+
+.earth-active {
+    @apply bg-blue-500/20 brightness-[1.6] pointer-events-none scale-110 
 }
