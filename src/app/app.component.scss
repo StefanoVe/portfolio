@@ -1,5 +1,5 @@
 .footer {
-    @apply p-4 w-full border-t backdrop-blur-xl hidden md:block dark:brightness-50 text-gray-100;
+    @apply p-4 w-full border-t backdrop-blur-xl hidden md:block dark:brightness-50 text-gray-100 absolute bottom-0;
 
     & .footer-header {
         @apply text-xs lg:text-sm;

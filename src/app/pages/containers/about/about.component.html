@@ -56,7 +56,7 @@
         {{ paragraphTxt.open }}
       </div>
       <p class="drop-shadow-md" id="p">
-        {{ firstParagraph() }}
+        {{ descriptionTxt() }}
       </p>
       <div class="about-code smooth">{{ paragraphTxt.close }}</div>
     </div>
@@ -64,14 +64,21 @@
     <div>
       <div class="about-code smooth">{{ paragraphTxt.open }}</div>
       <p class="drop-shadow-md">
-        {{ secondParagraph() }}
+        {{ childhoodTxt() }}
+      </p>
+      <div class="about-code smooth">{{ paragraphTxt.close }}</div>
+    </div>
+    <div>
+      <div class="about-code smooth">{{ paragraphTxt.open }}</div>
+      <p class="drop-shadow-md">
+        {{ pastExperiencesTxt() }}
       </p>
       <div class="about-code smooth">{{ paragraphTxt.close }}</div>
     </div>
 
     <div>
       <div class="about-code smooth">{{ paragraphTxt.open }}</div>
-      <p class="drop-shadow-md">{{ thirdParagraph() }}</p>
+      <p class="drop-shadow-md">{{ timeOffTxt() }}</p>
       <div class="about-code smooth">{{ paragraphTxt.close }}</div>
     </div>
   </div>
