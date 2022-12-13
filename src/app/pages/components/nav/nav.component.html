@@ -10,6 +10,7 @@
             class="nav-option smooth group/nav-option"
             [routerLink]="item.routerPath"
             routerLinkActive="active smooth"
+            [fragment]="item.fragment"
             [ngStyle]="{
               transform: 'translateX(-' + handleRotation($value) + 'px)'
             }"

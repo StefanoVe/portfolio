@@ -15,4 +15,14 @@ export class LandingComponent {
       it: 'Non ancora pronto',
     });
   }
+
+  public birthDate = new Date(1999, 2, 27);
+
+  public get age(): number {
+    const today = new Date();
+
+    let age = today.getFullYear() - this.birthDate.getFullYear();
+
+    return age;
+  }
 }

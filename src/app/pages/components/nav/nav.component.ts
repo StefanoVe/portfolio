@@ -8,7 +8,8 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit, OnDestroy {
-  public navItems: { label: string; routerPath: string }[] = [];
+  public navItems: { label: string; routerPath: string; fragment?: string }[] =
+    [];
 
   private destroy$ = new Subject<void>();
 
@@ -27,14 +28,15 @@ export class NavComponent implements OnInit, OnDestroy {
                   it: 'Su di me',
                 }),
                 routerPath: '/about',
+                fragment: 'p',
               },
-              {
-                label: this.lang._languageSensitiveText({
-                  en: 'Projects',
-                  it: 'Progetti',
-                }),
-                routerPath: '/projects',
-              },
+              // {
+              //   label: this.lang._languageSensitiveText({
+              //     en: 'Projects',
+              //     it: 'Progetti',
+              //   }),
+              //   routerPath: '/projects',
+              // },
               {
                 label: this.lang._languageSensitiveText({
                   en: 'Resume',
@@ -44,7 +46,14 @@ export class NavComponent implements OnInit, OnDestroy {
               },
               {
                 label: this.lang._languageSensitiveText({
-                  en: 'Contacts',
+                  en: 'Skills',
+                  it: 'Abilità',
+                }),
+                routerPath: '/skills',
+              },
+              {
+                label: this.lang._languageSensitiveText({
+                  en: 'Contact',
                   it: 'Contatti',
                 }),
                 routerPath: '/contacts',

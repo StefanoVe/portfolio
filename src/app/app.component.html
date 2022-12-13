@@ -6,8 +6,7 @@
       dark:bg-dotted-gray-700
       bg-transparent
       dark:bg-gray-900/30
-      text-gray-800
-      dark:text-gray-100
+      text-gray-100
       overflow-hidden
       transition-all
       duration-300
@@ -17,12 +16,12 @@
       w-screen
     "
   >
-    <app-wallpaper></app-wallpaper>
+    <app-wallpaper class="-z-10"></app-wallpaper>
     <div
       class="
         flex flex-col
         justify-between
-        h-screen
+        h-full
         overflow-y-auto overflow-x-hidden
       "
     >
@@ -42,10 +41,10 @@
             space-y-20
           "
         >
-          <div class="h-2/6 w-full lg:h-full xl:w-3/12 overflow-x-visible">
+          <div class="h-[50%] w-full lg:h-full xl:w-3/12">
             <app-nav></app-nav>
           </div>
-          <div class="h-full w-full xl:w-9/12 xl:h-full">
+          <div class="h-full w-full xl:w-9/12">
             <router-outlet></router-outlet>
           </div>
         </div>

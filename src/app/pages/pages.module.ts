@@ -6,9 +6,10 @@ import { WidgetsModule } from '../widgets/widgets.module';
 import { NavComponent } from './components/nav/nav.component';
 import { LandingComponent } from './containers/landing/landing.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { AboutComponent } from './containers/about/about.component';
 
 @NgModule({
-  declarations: [LandingComponent, NavComponent],
+  declarations: [LandingComponent, NavComponent, AboutComponent],
   imports: [CommonModule, PagesRoutingModule, WidgetsModule, SharedModule],
   exports: [NavComponent],
 })

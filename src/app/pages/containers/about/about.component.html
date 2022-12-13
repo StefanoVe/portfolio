@@ -1,0 +1,78 @@
+<div
+  class="
+    center
+    vertical
+    font-syne
+    text-lg
+    mx-2
+    md:mx-10
+    p-2
+    rounded-xl
+    group/about
+  "
+>
+  <div class="w-full xl:flex justify-between flex-wrap">
+    <div>
+      <div class="about-code code-left smooth max-w-sm" [title]="imgText.open">
+        {{ imgText.open }}
+      </div>
+      <img
+        src="/assets/me.jpg"
+        class="w-40 h-40 rounded-full object-cover shadow"
+      />
+      <div class="about-code code-left smooth">
+        {{ imgText.close }}
+      </div>
+    </div>
+    <div>
+      <div class="about-code smooth max-w-sm" [title]="h1Txt.open">
+        {{ h1Txt.open }}
+      </div>
+      <div class="xl:flex justify-end">
+        <h1
+          class="
+            my-auto
+            text-5xl
+            font-mono-display
+            uppercase
+            text-transparent
+            max-w-fit
+            bg-clip-text bg-gradient-to-r
+            from-blue-400
+            to-purple-600
+          "
+        >
+          {{ aboutMe() }}
+        </h1>
+      </div>
+      <div class="about-code smooth">
+        {{ h1Txt.close }}
+      </div>
+    </div>
+  </div>
+  <div class="space-y-4 text-end">
+    <div>
+      <div class="about-code smooth">
+        {{ paragraphTxt.open }}
+      </div>
+      <p class="drop-shadow-md" id="p">
+        {{ firstParagraph() }}
+      </p>
+      <div class="about-code smooth">{{ paragraphTxt.close }}</div>
+    </div>
+
+    <div>
+      <div class="about-code smooth">{{ paragraphTxt.open }}</div>
+      <p class="drop-shadow-md">
+        {{ secondParagraph() }}
+      </p>
+      <div class="about-code smooth">{{ paragraphTxt.close }}</div>
+    </div>
+
+    <div>
+      <div class="about-code smooth">{{ paragraphTxt.open }}</div>
+      <p class="drop-shadow-md">{{ thirdParagraph() }}</p>
+      <div class="about-code smooth">{{ paragraphTxt.close }}</div>
+    </div>
+  </div>
+</div>
