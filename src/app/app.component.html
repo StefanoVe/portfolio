@@ -40,13 +40,22 @@
             justify-between
             h-full
             overflow-y-visible
-            space-y-20
           "
         >
           <div class="h-full w-full lg:h-full xl:w-3/12">
             <app-nav></app-nav>
           </div>
-          <div class="h-full w-full xl:w-9/12">
+          <div
+            class="
+              h-full
+              w-full
+              xl:w-9/12
+              border-r border-colors
+              mt-10
+              xl:mt-0
+              p-4
+            "
+          >
             <router-outlet></router-outlet>
           </div>
         </div>
