@@ -12,12 +12,12 @@ export class ResumeComponent {
     description: string;
   }[] = [
     {
-      title: 'Stage in web development',
+      title: 'PLACEHOLDER',
       dates: { from: new Date('2019-05-01'), to: new Date('2019-07-01') },
       description: 'I worked on a web application for a local company.',
     },
     {
-      title: 'Stage in web development',
+      title: 'PLACEHOLDER',
       dates: { from: new Date('2019-05-01'), to: new Date('2019-07-01') },
       description: 'I worked on a web application for a local company.',
     },
