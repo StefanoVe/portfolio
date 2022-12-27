@@ -7,9 +7,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { LandingComponent } from './containers/landing/landing.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { AboutComponent } from './containers/about/about.component';
+import { ResumeComponent } from './containers/resume/resume.component';
 
 @NgModule({
-  declarations: [LandingComponent, NavComponent, AboutComponent],
+  declarations: [LandingComponent, NavComponent, AboutComponent, ResumeComponent],
   imports: [CommonModule, PagesRoutingModule, WidgetsModule, SharedModule],
   exports: [NavComponent],
 })

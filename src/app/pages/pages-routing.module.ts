@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './containers/about/about.component';
 import { LandingComponent } from './containers/landing/landing.component';
+import { ResumeComponent } from './containers/resume/resume.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent,
   },
 ];
 

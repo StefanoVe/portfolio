@@ -1,0 +1,27 @@
+.timeline {
+    @apply p-2 bg-gradient-to-t from-gray-100 to-gray-200 h-full w-4 rounded-xl;
+}
+
+
+.event {
+    @apply  flex w-full;
+
+  
+}
+
+.event-content
+{
+    
+    & > h4 {
+        @apply text-gray-300 text-lg uppercase font-medium;
+    }
+
+}
+
+.event-left {
+    @apply justify-start text-end
+}
+
+.event-right {
+    @apply justify-end text-left
+}

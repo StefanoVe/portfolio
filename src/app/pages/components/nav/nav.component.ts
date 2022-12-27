@@ -54,7 +54,7 @@ export class NavComponent implements OnInit, OnDestroy {
               {
                 label: this.lang._languageSensitiveText({
                   en: 'Contact',
-                  it: 'Contatti',
+                  it: 'Contattami',
                 }),
                 routerPath: '/contacts',
               },
@@ -74,13 +74,20 @@ export class NavComponent implements OnInit, OnDestroy {
     //if the current index is more than half of the total items, then the rotation must be less than the previous item
     //the first item is always at 0 rotation, the last item is always at 0 rotation
     /**
-     * example:
+     * example 1:
      *    item1 (0)
      *  item2 (15)
      * item3 (30)
      * item4 (30)
      *  item5 (15)
      *   item6 (0)
+     *
+     * example 2:
+     *    item1 (0)
+     *  item2 (15)
+     * item3 (30)
+     *  item4 (15)
+     *    item5 (0)
      */
 
     const totalItems = this.navItems.length;

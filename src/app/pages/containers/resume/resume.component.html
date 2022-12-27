@@ -1,0 +1,17 @@
+<div class="center h-full relative">
+  <div class="p-2 w-full">
+    <div
+      class="event"
+      *ngFor="let event of events; let i = index"
+      [ngClass]="i % 2 === 0 ? 'event-left' : 'event-right'"
+    >
+      <div class="event-content">
+        <h4>{{ event.title }}</h4>
+        <p>
+          {{ event.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="timeline absolute"></div>
+</div>

@@ -33,13 +33,13 @@ export class AppComponent {
   public footerTopLeftTxt() {
     return this._lang._languageSensitiveText({
       en: 'Check out this project on Github',
-      it: 'Guarda questo progetto su Github',
+      it: 'Esplora questo progetto su Github',
     });
   }
 
   public footerTopRightTxt() {
     return this._lang._languageSensitiveText({
-      en: 'Developed with Angular 15 and Tailwind CSS 3.2.4 ',
+      en: 'Built with Angular 15 and Tailwind CSS 3.2.4 ',
       it: 'Sviluppato con Angular 15 e Tailwind CSS 3.2.4',
     });
   }
