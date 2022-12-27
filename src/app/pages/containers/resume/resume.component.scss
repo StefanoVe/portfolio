@@ -1,19 +1,23 @@
 .timeline {
-    @apply p-2 bg-gradient-to-t from-gray-100 to-gray-200 h-full w-4 rounded-xl;
+    @apply w-4 p-3 bg-gradient-to-t from-blue-400 to-blue-900 h-full rounded-xl shadow-xl  shadow-gray-700 ;
 }
 
 
 .event {
-    @apply  flex w-full;
-
-  
+    @apply  flex  ;
 }
 
 .event-content
 {
+@apply p-10 space-y-2 w-1/2;
     
     & > h4 {
-        @apply text-gray-300 text-lg uppercase font-medium;
+        @apply  text-lg font-bold p-2 backdrop-blur-sm  font-mono-display flex space-x-1 ;
+    }
+
+    & > p {
+
+        @apply  font-medium ;
     }
 
 }
