@@ -9,7 +9,7 @@
 
 .event-content
 {
-@apply p-10 space-y-2 w-1/2;
+@apply  xl:p-10 space-y-2 w-1/2;
     
     & > h4 {
         @apply  text-lg font-bold p-2 backdrop-blur-sm  font-mono-display flex space-x-1 ;
@@ -23,9 +23,9 @@
 }
 
 .event-left {
-    @apply justify-start text-end
+    @apply justify-start text-end mr-10
 }
 
 .event-right {
-    @apply justify-end text-left
+    @apply justify-end text-left ml-10 
 }
