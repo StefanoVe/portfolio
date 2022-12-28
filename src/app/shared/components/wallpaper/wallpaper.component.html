@@ -3,7 +3,7 @@
   alt=""
   class="
     brightness-90
-    absolute
+    fixed
     bottom-0
     w-full
     min-h-screen
@@ -12,7 +12,9 @@
     dark:translate-x-0
     opacity-0
     dark:opacity-100
-    object-contain object-left-bottom
+    lg:object-fit lg:object-left-bottom
+    hidden
+    lg:block
     pointer-events-none
     smooth
     delay-500
@@ -22,14 +24,14 @@
 
 <img
   class="
-    absolute
+    fixed
     w-full
     min-h-screen
     overflow-visible
     top-0
     dark:opacity-0
     -z-10
-    object-cover
+    object-none
     smooth
     xl:object-left-top
     brightness-[85%]
@@ -39,7 +41,7 @@
 
 <div
   class="
-    absolute
+    fixed
     w-full
     min-h-screen
     overflow-visible
@@ -54,7 +56,7 @@
 ></div>
 <img
   class="
-    absolute
+    fixed
     w-full
     min-h-screen
     overflow-visible
@@ -64,7 +66,8 @@
     dark:brightness-50
     dark:saturate-150
     -z-10
-    object-cover
+    object-none
+    lg:object-cover
     smooth
   "
   src="/assets/AI/landing-dm.webp"
