@@ -76,3 +76,11 @@
     }
 }
 
+
+.code {
+    @apply text-end opacity-[40%] truncate text-xs backdrop-blur-lg rounded;
+
+    &.code-left {
+        @apply text-start;
+    }
+}

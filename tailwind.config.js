@@ -8,7 +8,14 @@ module.exports = {
         amatic: ["Amatic SC", "cursive"],
         "mono-display": ["Major Mono Display", "monospace"],
       },
+      backgroundSize: {
+        "mobile-wallpaper": "70rem",
+      },
       colors: {
+        foliage: {
+          DEFAULT: "#836A34",
+          mobile: "#e5fed8",
+        },
         "legio-gold": {
           DEFAULT: "#946C00",
           50: "#FFCF4D",

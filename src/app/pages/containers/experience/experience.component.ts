@@ -76,4 +76,11 @@ export class Experience {
       it: 'Progetto personale',
     });
   }
+
+  public title() {
+    return this._lang._languageSensitiveText({
+      en: 'Experience',
+      it: 'Esperienza',
+    });
+  }
 }

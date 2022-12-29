@@ -1,30 +1,24 @@
-.FadeAwayLm{
-    
-    background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(156 163 175) 100%), url("/assets/AI/wp-lm-3.webp");
-    background-position:top center;
-    background-repeat:no-repeat;
-    background-size:100% auto;
-}
-.FadeAwayDm{
-    
-    background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(31 41 55) 100%), url("/assets/AI/landing-dm.webp");
-    background-position:top center;
-    background-repeat:no-repeat;
-    background-size:100% auto;
-}
 
 
-.FadeAwayBlur {
-    
-    background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(31 41 55) 100%);
-    background-position:top center;
-    background-repeat:no-repeat;
-    background-size:100% auto;
-}
+.fade-away {
 
-.FadeAwayAstro {
-    background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(31 41 55) 100%, url('/assets/AI/astro-2.webp'));
-    background-position:top center;
     background-repeat:no-repeat;
-    background-size:100% auto;
+    background-position: top;
+
+    @apply bg-mobile-wallpaper lg:bg-cover z-0;
+
+    &.fa-dark {
+        background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(31 41 55) 100%), url("/assets/AI/landing-dm.webp");
+    }
+
+    &.fa-light {
+        background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(131, 106, 52) 100%), url("/assets/AI/wp-lm-3.webp");
+    }
+
+    &.fa-astro
+    {
+        background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 75%,rgb(31 41 55) 100%, url('/assets/AI/astro-2.webp'));
+    }
+
+
 }

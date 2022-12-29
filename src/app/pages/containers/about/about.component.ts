@@ -6,11 +6,6 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  public h1Txt = {
-    open: '<h1 class="my-auto text-5xl font-mono-display text-end uppercase text-transparent max-w-fit bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">',
-    close: '</h1>',
-  };
-
   public paragraphTxt = {
     open: '<p class="drop-shadow-md">',
     close: '</p>',

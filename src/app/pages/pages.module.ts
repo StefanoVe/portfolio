@@ -8,9 +8,10 @@ import { AboutComponent } from './containers/about/about.component';
 import { Experience } from './containers/experience/experience.component';
 import { LandingComponent } from './containers/landing/landing.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
-  declarations: [LandingComponent, NavComponent, AboutComponent, Experience],
+  declarations: [LandingComponent, NavComponent, AboutComponent, Experience, TitleComponent],
   imports: [CommonModule, PagesRoutingModule, WidgetsModule, SharedModule],
   exports: [NavComponent],
 })

@@ -1,56 +1,37 @@
+<!-- ASTRO -->
 <div
   class="
-    absolute
-    bottom-0
+    fixed
     w-full
-    h-full
-    overflow-visible
+    min-h-screen
     -translate-x-20
     dark:translate-x-0
     opacity-0
     dark:opacity-100
-    hidden
-    lg:block
     pointer-events-none
     smooth
     delay-500
     dark:delay-0
-    z-[3]
-    FadeAwayAstro
+    fade-away
+    fa-astro
   "
 ></div>
 
+<!-- WALLPAPER LIGHT MODE -->
 <div
   class="
     absolute
     w-full
-    h-full
-    overflow-visible
-    top-0
+    h-[40rem]
+    xl:h-full
     dark:opacity-0
-    object-cover
     smooth
-    xl:object-left-top
-    FadeAwayLm
+    fade-away
+    fa-light
   "
 ></div>
 
-<div
-  class="
-    absolute
-    w-full
-    h-full
-    overflow-visible
-    top-0
-    z-[2]
-    dark:backdrop-blur-3xl
-    opacity-0
-    dark:opacity-100
-    pointer-events-none
-    smooth
-    FadeAwayBlur
-  "
-></div>
+<!-- WALLPAPER DARK MODE -->
 <div
   class="
     absolute
@@ -60,10 +41,12 @@
     top-0
     opacity-0
     dark:opacity-100
-    z-[1]
     object-none
     lg:object-cover
     smooth
-    FadeAwayDm
+    fade-away
+    fa-dark
+    dark:blur-xl
+    brightness-75
   "
 ></div>
