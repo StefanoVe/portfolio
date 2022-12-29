@@ -4,13 +4,13 @@ import { SharedModule } from '../shared/shared.module';
 import { WidgetsModule } from '../widgets/widgets.module';
 
 import { NavComponent } from './components/nav/nav.component';
+import { AboutComponent } from './containers/about/about.component';
+import { Experience } from './containers/experience/experience.component';
 import { LandingComponent } from './containers/landing/landing.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { AboutComponent } from './containers/about/about.component';
-import { ResumeComponent } from './containers/resume/resume.component';
 
 @NgModule({
-  declarations: [LandingComponent, NavComponent, AboutComponent, ResumeComponent],
+  declarations: [LandingComponent, NavComponent, AboutComponent, Experience],
   imports: [CommonModule, PagesRoutingModule, WidgetsModule, SharedModule],
   exports: [NavComponent],
 })

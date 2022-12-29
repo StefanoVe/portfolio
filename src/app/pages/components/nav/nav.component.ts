@@ -39,10 +39,10 @@ export class NavComponent implements OnInit, OnDestroy {
               // },
               {
                 label: this.lang._languageSensitiveText({
-                  en: 'Resume',
-                  it: 'Curriculum',
+                  en: 'Experience',
+                  it: 'Esperienza',
                 }),
-                routerPath: '/resume',
+                routerPath: '/experience',
               },
               {
                 label: this.lang._languageSensitiveText({

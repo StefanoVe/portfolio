@@ -1,74 +1,69 @@
-<img
-  src="/assets/AI/astro-2.webp"
-  alt=""
+<div
   class="
-    brightness-90
-    fixed
+    absolute
     bottom-0
     w-full
-    min-h-screen
+    h-full
     overflow-visible
     -translate-x-20
     dark:translate-x-0
     opacity-0
     dark:opacity-100
-    lg:object-fit lg:object-left-bottom
     hidden
     lg:block
     pointer-events-none
     smooth
     delay-500
     dark:delay-0
+    z-[3]
+    FadeAwayAstro
   "
-/>
-
-<img
-  class="
-    fixed
-    w-full
-    min-h-screen
-    overflow-visible
-    top-0
-    dark:opacity-0
-    -z-10
-    object-none
-    smooth
-    xl:object-left-top
-    brightness-[85%]
-  "
-  src="/assets/AI/wp-lm-3.webp"
-/>
+></div>
 
 <div
   class="
-    fixed
+    absolute
     w-full
-    min-h-screen
+    h-full
     overflow-visible
     top-0
-    -z-[2]
+    dark:opacity-0
+    object-cover
+    smooth
+    xl:object-left-top
+    FadeAwayLm
+  "
+></div>
+
+<div
+  class="
+    absolute
+    w-full
+    h-full
+    overflow-visible
+    top-0
+    z-[2]
     dark:backdrop-blur-3xl
     opacity-0
     dark:opacity-100
     pointer-events-none
     smooth
+    FadeAwayBlur
   "
 ></div>
-<img
+<div
   class="
-    fixed
+    absolute
     w-full
-    min-h-screen
+    h-full
     overflow-visible
     top-0
     opacity-0
     dark:opacity-100
-    dark:brightness-50
-    dark:saturate-150
-    -z-10
+    z-[1]
     object-none
     lg:object-cover
     smooth
+    FadeAwayDm
   "
-  src="/assets/AI/landing-dm.webp"
-/>
+></div>

@@ -1,6 +1,6 @@
 .nav {
     
-    @apply font-mono-display text-2xl text-right text-white ;
+    @apply font-mono-display text-2xl text-right ;
 
     & .nav-option {
         @apply translate-x-0 hover:brightness-[8] whitespace-nowrap my-2 cursor-pointer px-4  ;
