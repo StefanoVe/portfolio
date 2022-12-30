@@ -4,12 +4,12 @@
 
 
 .event {
-    @apply  flex  ;
+    @apply  flex  w-full  ;
 }
 
 .event-content
 {
-@apply  xl:p-10 space-y-2 w-1/2;
+@apply   xl:p-10 space-y-2 max-w-[80%] xl:max-w-[50%];
     
     & > h4 {
         @apply  text-lg font-bold p-2 backdrop-blur-sm  font-mono-display flex space-x-1 ;
@@ -23,9 +23,9 @@
 }
 
 .event-left {
-    @apply justify-start text-end mr-10
+    @apply xl:justify-start text-end 
 }
 
 .event-right {
-    @apply justify-end text-left ml-10 
+    @apply xl:justify-end text-end xl:text-left 
 }

@@ -1,11 +1,11 @@
 .footer {
-    @apply p-4 w-full  border-t backdrop-blur-xl hidden md:block brightness-125 dark:brightness-50 text-gray-100   ;
+    @apply p-4 w-full  border-t backdrop-blur-xl block backdrop-brightness-75 dark:brightness-50 text-white;
 
     & .footer-header {
-        @apply text-xs lg:text-sm;
+        @apply text-[0.70rem] lg:text-sm;
     }
 
     & .footer-content {
-        @apply text-[0.50rem] lg:text-xs ;
+        @apply text-[0.50rem] lg:text-xs  ;
     }
 }

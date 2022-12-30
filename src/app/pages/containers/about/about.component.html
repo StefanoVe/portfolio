@@ -11,13 +11,13 @@
     group/about
   "
 >
-  <div class="w-full xl:flex justify-between flex-wrap z-10">
+  <div class="w-full flex justify-between flex-wrap z-10 space-y-2">
     <div>
-      <div class="code code-left smooth max-w-sm" [title]="imgText.open">
+      <div class="code code-left smooth w-40" [title]="imgText.open">
         {{ imgText.open }}
       </div>
       <img
-        src="/assets/me.jpg"
+        src="/assets/me.webp"
         class="w-40 h-40 rounded-full object-cover shadow"
       />
       <div class="code code-left smooth">
@@ -28,7 +28,7 @@
       <app-title [title]="aboutMe()"></app-title>
     </div>
   </div>
-  <div class="space-y-4 text-end">
+  <div class="space-y-4 text-end mt-4 lg:mt-10">
     <div>
       <div class="code smooth">
         {{ paragraphTxt.open }}

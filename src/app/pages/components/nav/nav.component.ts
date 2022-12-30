@@ -28,7 +28,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   it: 'Su di me',
                 }),
                 routerPath: '/about',
-                fragment: 'p',
+                fragment: 'title',
               },
               // {
               //   label: this.lang._languageSensitiveText({
@@ -43,6 +43,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   it: 'Esperienza',
                 }),
                 routerPath: '/experience',
+                fragment: 'title',
               },
               {
                 label: this.lang._languageSensitiveText({
@@ -50,6 +51,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   it: 'Abilità',
                 }),
                 routerPath: '/skills',
+                fragment: 'title',
               },
               {
                 label: this.lang._languageSensitiveText({
@@ -57,6 +59,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   it: 'Contattami',
                 }),
                 routerPath: '/contacts',
+                fragment: 'title',
               },
             ])
         )

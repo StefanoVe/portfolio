@@ -14,7 +14,7 @@ export class AppComponent {
 
   constructor(private _lang: LanguageService) {}
 
-  public handleDarkMode() {
+  public bootstrapDarkMode() {
     const hasDarkModeVar = localStorage.getItem('darkMode');
 
     if (!hasDarkModeVar) {

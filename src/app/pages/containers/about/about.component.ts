@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -6,22 +7,24 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
+  public birthDate = new Date(1999, 2, 27);
+
   public paragraphTxt = {
     open: '<p class="drop-shadow-md">',
     close: '</p>',
   };
 
   public imgText = {
-    open: '<img src="/assets/me.jpg" class="w-40 h-40 rounded-full object-cover">',
+    open: '<img src="/assets/me.webp" class="w-40 h-40 rounded-full object-cover">',
     close: '</img>',
   };
 
-  constructor(private _lang: LanguageService) {}
+  constructor(private _lang: LanguageService, private route: ActivatedRoute) {}
 
   public descriptionTxt() {
     return this._lang._languageSensitiveText({
-      en: "I'm an Italian 🇮🇹 full stack developer.",
-      it: 'Sono un developer Full Stack italiano 🇮🇹.',
+      en: `I'm an Italian 🇮🇹, ${this.age} year old, full stack developer.`,
+      it: `Ho ${this.age} e sono un developer Full Stack italiano 🇮🇹.`,
     });
   }
 
@@ -51,5 +54,13 @@ export class AboutComponent {
       en: 'About me',
       it: 'Su di me',
     });
+  }
+
+  public get age(): number {
+    const today = new Date();
+
+    let age = today.getFullYear() - this.birthDate.getFullYear();
+
+    return age;
   }
 }

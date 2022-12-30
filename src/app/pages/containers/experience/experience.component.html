@@ -1,10 +1,22 @@
 <div class="flex justify-end p-2">
   <app-title [title]="title()" class="z-20"></app-title>
 </div>
-<div class="center h-full relative font-syne">
-  <div class="p-5 w-full">
+
+<div
+  class="
+    flex flex-row-reverse
+    xl:center
+    h-full
+    relative
+    font-syne
+    my-10
+    2xl:m-10
+  "
+>
+  <div class="xl:p-5 space-y-10 xl:space-y-0">
     <div
       class="event"
+      id="event{{ i }}"
       *ngFor="let event of events(); let i = index"
       [ngClass]="i % 2 === 0 ? 'event-left' : 'event-right'"
     >
@@ -37,7 +49,7 @@
           }}
         </p>
 
-        <h4 [ngClass]="i % 2 === 0 ? 'flex-row' : 'flex-row-reverse'">
+        <h4 [ngClass]="i % 2 === 0 ? 'flex-row' : 'xl:flex-row-reverse'">
           <svg
             *ngIf="event.isSideProject"
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +74,11 @@
       </div>
     </div>
   </div>
-  <div class="absolute h-full">
+  <ng-container [ngTemplateOutlet]="timeline"></ng-container>
+</div>
+
+<ng-template #timeline>
+  <div class="absolute h-full xl:w-full">
     <div class="absolute left-0 right-0 top-1">
       <span
         class="
@@ -93,7 +109,7 @@
     <div class="absolute bottom-[5.7rem] left-0 right-3">☁️</div>
     <div class="absolute bottom-[5.5rem] left-3 right-0">☁️</div>
     <div class="absolute bottom-20 left-0 right-0">☁️</div>
-    <div class="timeline"></div>
+    <div class="timeline xl:m-auto"></div>
     <div class="absolute left-0 right-0 bottom-1 -rotate-45">🚀</div>
   </div>
-</div>
+</ng-template>

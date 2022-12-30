@@ -13,7 +13,7 @@ module.exports = {
       },
       colors: {
         foliage: {
-          DEFAULT: "#836A34",
+          DEFAULT: "#997605",
           mobile: "#e5fed8",
         },
         "legio-gold": {

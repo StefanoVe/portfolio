@@ -1,4 +1,4 @@
-<span class="hidden">{{ handleDarkMode() | json }}</span>
+<span class="hidden">{{ bootstrapDarkMode() | json }}</span>
 <div [ngClass]="{ dark: darkMode.enabled }">
   <app-wallpaper class="h-full w-full"></app-wallpaper>
 
@@ -70,7 +70,7 @@
           <a
             href="https://github.com/StefanoVe/portfolio"
             target="_blank"
-            class="flex space-x-1"
+            class="flex space-x-1 text-left"
           >
             <svg
               fill="currentColor"
@@ -84,9 +84,10 @@
             </svg>
             <small class="my-auto font-medium">{{ footerTopLeftTxt() }}!</small>
           </a>
-          <span>{{ footerTopRightTxt() }}</span>
+          <span class="text-end">{{ footerTopRightTxt() }}</span>
         </div>
       </div>
+
       <div class="flex justify-between">
         <div class="footer-content text-left w-6/12">
           <span>{{ footerBottomLeftTxt() }}</span>

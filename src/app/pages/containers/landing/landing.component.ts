@@ -9,20 +9,24 @@ import { LanguageService } from 'src/app/services/language.service';
 export class LandingComponent {
   constructor(private _lang: LanguageService) {}
 
-  public notReadyYetTxt() {
+  public HelloTxt() {
     return this._lang._languageSensitiveText({
-      en: 'Not ready yet',
-      it: 'Non ancora pronto',
+      en: 'Hello World!',
+      it: 'Ciao Mondo!',
     });
   }
 
-  public birthDate = new Date(1999, 2, 27);
+  public ImTxt() {
+    return this._lang._languageSensitiveText({
+      en: "I'm",
+      it: 'Mi chiamo',
+    });
+  }
 
-  public get age(): number {
-    const today = new Date();
-
-    let age = today.getFullYear() - this.birthDate.getFullYear();
-
-    return age;
+  public SubtitleTxt() {
+    return this._lang._languageSensitiveText({
+      en: 'a full-stack web developer based in Italy 🇮🇹!',
+      it: 'e sono un developer full-stack italiano 🇮🇹!',
+    });
   }
 }
