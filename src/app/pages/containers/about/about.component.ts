@@ -59,8 +59,8 @@ export class AboutComponent {
   public get age(): number {
     const today = new Date();
 
-    let age = today.getFullYear() - this.birthDate.getFullYear();
+    let age = today.valueOf() - this.birthDate.valueOf();
 
-    return age;
+    return new Date(age).getFullYear() - 1970;
   }
 }
