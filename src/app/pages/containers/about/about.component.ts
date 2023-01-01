@@ -23,8 +23,8 @@ export class AboutComponent {
 
   public descriptionTxt() {
     return this._lang.languageSensitiveText({
-      en: `I'm an Italian 🇮🇹, ${this.age} year old, full stack developer.`,
-      it: `Ho ${this.age} e sono un developer Full Stack italiano 🇮🇹.`,
+      en: `I'm an Italian 🇮🇹, ${this._age} year old, full stack developer.`,
+      it: `Ho ${this._age} e sono un developer Full Stack italiano 🇮🇹.`,
     });
   }
 
@@ -56,7 +56,7 @@ export class AboutComponent {
     });
   }
 
-  public get age(): number {
+  private get _age(): number {
     const today = new Date();
 
     let age = today.valueOf() - this.birthDate.valueOf();
