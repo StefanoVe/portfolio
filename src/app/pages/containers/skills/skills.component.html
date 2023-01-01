@@ -1,0 +1,56 @@
+<div class="font-syne px-4">
+  <div class="flex justify-end">
+    <div>
+      <app-title [title]="titleTxt()"></app-title>
+      <div
+        class="
+          font-syne
+          text-small text-end
+          opacity-75
+          text-gray-700
+          dark:text-white
+        "
+      >
+        {{ lastUpdateTxt() }} {{ lastUpdate }}
+      </div>
+    </div>
+  </div>
+  <h4 class="my-8 text-lg text-end">
+    <p class="code">{{ warningTextCode.open }}</p>
+    {{ warningTxt() }}
+    <p class="code">{{ warningTextCode.close }}</p>
+  </h4>
+
+  <div class="center">
+    <div class="flex flex-col space-y-4 w-full">
+      <ng-container
+        *ngFor="let item of skills"
+        [ngTemplateOutlet]="progressBar"
+        [ngTemplateOutletContext]="item"
+      ></ng-container>
+      <div class="border-t flex justify-between p-2 xl:text-xl">
+        <span> {{ totalHoursTxt() }} </span>
+
+        <span> {{ totalHours() }} h</span>
+      </div>
+    </div>
+  </div>
+
+  <ng-template
+    #progressBar
+    let-colorClass="color"
+    let-progress="recordedHours"
+    let-lang="language"
+  >
+    <div class="text-left space-y-1 relative">
+      <span> {{ lang }} ({{ progress }} h) </span>
+      <div
+        class="h-2 p-1 rounded-xl"
+        [ngStyle]="{
+          'background-color': colorClass,
+          width: hoursPercentage(progress) + '%'
+        }"
+      ></div>
+    </div>
+  </ng-template>
+</div>

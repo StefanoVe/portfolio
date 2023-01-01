@@ -11,14 +11,14 @@ export class NotFoundComponent {
   constructor(private router: Router, private _lang: LanguageService) {}
 
   public notFoundTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: 'Are you lost?',
       it: 'Non trovi più la strada?',
     });
   }
 
   public wannaGoHomeTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: 'Wanna go home?',
       it: 'Vuoi tornare a casa?',
     });

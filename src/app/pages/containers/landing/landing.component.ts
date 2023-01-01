@@ -10,21 +10,21 @@ export class LandingComponent {
   constructor(private _lang: LanguageService) {}
 
   public HelloTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: 'Hello World!',
       it: 'Ciao Mondo!',
     });
   }
 
   public ImTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: "I'm",
       it: 'Mi chiamo',
     });
   }
 
   public SubtitleTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: 'a full-stack web developer based in Italy 🇮🇹!',
       it: 'e sono un developer full-stack italiano 🇮🇹!',
     });

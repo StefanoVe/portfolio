@@ -23,22 +23,22 @@ export class NavComponent implements OnInit, OnDestroy {
           () =>
             (this.navItems = [
               {
-                label: this.lang._languageSensitiveText({
+                label: this.lang.languageSensitiveText({
                   en: 'About',
                   it: 'Su di me',
                 }),
                 routerPath: '/about',
                 fragment: 'title',
               },
-              // {
-              //   label: this.lang._languageSensitiveText({
-              //     en: 'Projects',
-              //     it: 'Progetti',
-              //   }),
-              //   routerPath: '/projects',
-              // },
               {
-                label: this.lang._languageSensitiveText({
+                label: this.lang.languageSensitiveText({
+                  en: 'Tools',
+                  it: 'Strumenti',
+                }),
+                routerPath: '/tools',
+              },
+              {
+                label: this.lang.languageSensitiveText({
                   en: 'Experience',
                   it: 'Esperienza',
                 }),
@@ -46,7 +46,7 @@ export class NavComponent implements OnInit, OnDestroy {
                 fragment: 'title',
               },
               {
-                label: this.lang._languageSensitiveText({
+                label: this.lang.languageSensitiveText({
                   en: 'Skills',
                   it: 'Abilità',
                 }),
@@ -54,7 +54,7 @@ export class NavComponent implements OnInit, OnDestroy {
                 fragment: 'title',
               },
               {
-                label: this.lang._languageSensitiveText({
+                label: this.lang.languageSensitiveText({
                   en: 'Contact',
                   it: 'Contattami',
                 }),
@@ -94,7 +94,7 @@ export class NavComponent implements OnInit, OnDestroy {
      */
 
     const totalItems = this.navItems.length;
-    const halfItems = Math.floor(totalItems / 2);
+    const halfItems = Math.ceil(totalItems / 2);
     const rotation = 30;
 
     if (index === 0 || index === totalItems - 1) {
@@ -109,7 +109,7 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   public homeTxt() {
-    return this.lang._languageSensitiveText({
+    return this.lang.languageSensitiveText({
       en: 'Home',
       it: 'Home',
     });

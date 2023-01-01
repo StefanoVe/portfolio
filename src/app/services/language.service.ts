@@ -30,7 +30,7 @@ export class LanguageService {
     this.languageChanges.next(lang);
   }
 
-  public _languageSensitiveText(text: { en: string; it: string }) {
+  public languageSensitiveText(text: { en: string; it: string }) {
     return text[this._currentLang];
   }
 }

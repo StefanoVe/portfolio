@@ -32,13 +32,13 @@ export class ToggleDarkModeComponent {
   }
 
   public darkModeTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: 'Nighttime',
       it: 'Notte',
     });
   }
   public lightModeTxt() {
-    return this._lang._languageSensitiveText({
+    return this._lang.languageSensitiveText({
       en: 'Daytime',
       it: 'Giorno',
     });
