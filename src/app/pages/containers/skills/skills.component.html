@@ -1,4 +1,4 @@
-<div class="font-syne px-4">
+<div class="font-syne px-4 z-20">
   <div class="flex justify-end">
     <div>
       <app-title [title]="titleTxt()"></app-title>
@@ -15,23 +15,30 @@
       </div>
     </div>
   </div>
-  <h4 class="my-8 text-lg text-end">
-    <p class="code">{{ warningTextCode.open }}</p>
-    {{ warningTxt() }}
-    <p class="code">{{ warningTextCode.close }}</p>
-  </h4>
 
-  <div class="center">
-    <div class="flex flex-col space-y-4 w-full">
-      <ng-container
-        *ngFor="let item of skills"
-        [ngTemplateOutlet]="progressBar"
-        [ngTemplateOutletContext]="item"
-      ></ng-container>
-      <div class="border-t flex justify-between p-2 xl:text-xl">
-        <span> {{ totalHoursTxt() }} </span>
-
-        <span> {{ totalHours() }} h</span>
+  <div class="center my-10">
+    <div class="flex flex-col space-y-6 w-full relative">
+      <div #skillsContainer class="w-0 smooth space-y-4">
+        <ng-container
+          *ngFor="let item of skills"
+          [ngTemplateOutlet]="progressBar"
+          [ngTemplateOutletContext]="item"
+        ></ng-container>
+      </div>
+      <div class="border-t flex justify-end py-4 xl:text-xl">
+        <span
+          class="
+            delay-[3000ms]
+            smooth
+            translate-x-10
+            opacity-0
+            text-left
+            whitespace-nowrap
+          "
+          #totalHoursText
+        >
+          {{ totalHours() }} h</span
+        >
       </div>
     </div>
   </div>
@@ -41,16 +48,35 @@
     let-colorClass="color"
     let-progress="recordedHours"
     let-lang="language"
+    let-index="index"
   >
-    <div class="text-left space-y-1 relative">
-      <span> {{ lang }} ({{ progress }} h) </span>
-      <div
-        class="h-2 p-1 rounded-xl"
-        [ngStyle]="{
-          'background-color': colorClass,
-          width: hoursPercentage(progress) + '%'
-        }"
-      ></div>
+    <div class="text-left space-y-2">
+      <div>
+        <span class="truncate"> {{ lang }} </span>
+        <div class="flex">
+          <div
+            class="h-2 p-1 rounded-xl"
+            [ngStyle]="{
+              'background-color': colorClass,
+              width: hoursPercentage(progress) + '%'
+            }"
+          ></div>
+          <div
+            #progressText
+            class="
+              absolute
+              right-0
+              -mt-2
+              smooth
+              opacity-0
+              delay-1000
+              translate-x-9
+            "
+          >
+            {{ progress }} h
+          </div>
+        </div>
+      </div>
     </div>
   </ng-template>
 </div>

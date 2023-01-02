@@ -16,22 +16,20 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "architect":
-      
-       {
-          "storybook": {
-            "builder": "@storybook/angular:start-storybook",
-            "options": {
-              "browserTarget": "angular-cli:build",
-              "port": 6006
-            }
-          },
-          "build-storybook": {
-            "builder": "@storybook/angular:build-storybook",
-            "options": {
-              "browserTarget": "angular-cli:build"
-            }
-          },
+      "architect": {
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "browserTarget": "angular-cli:build",
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "browserTarget": "angular-cli:build"
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -41,17 +39,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "src/assets/blobz/blobz.min.css"
+              "src/assets/blobz/blobz.min.css",
+              "node_modules/animate.css/animate.min.css"
             ],
-            "scripts": [
-              
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -112,20 +106,15 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
   },
-  
+
   "cli": {
     "analytics": "285ce0f4-93c8-46ab-9e60-9f61b51d5c47"
   }

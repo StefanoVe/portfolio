@@ -39,8 +39,8 @@ export class ExperienceComponent {
         }),
         dates: { from: new Date('2020-12-01'), to: new Date() },
         description: this._lang.languageSensitiveText({
-          it: `Sviluppo di back-end e front-end del sito Web di Legione Etruria ASD, usando vanilla JS e l'API Developer di Wix`,
-          en: `Development of the back and front ends of the Legione Etruria ASD Web site, using vanilla JS and the Wix Developer API`,
+          it: `Sviluppo di back-end e front-end del sito Web di Legione Etruria ASD, usando vanilla JS con l'API Developer di Wix`,
+          en: `Development of the back and front ends of the Legione Etruria ASD Web site, using vanilla JS with the Wix Developer API`,
         }),
       },
       {

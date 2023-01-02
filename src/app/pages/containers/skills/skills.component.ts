@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
+  ViewChildren,
+} from '@angular/core';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -6,7 +12,11 @@ import { LanguageService } from 'src/app/services/language.service';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterViewInit {
+  @ViewChild('skillsContainer') skillsContainer!: ElementRef<HTMLElement>;
+  @ViewChild('totalHoursText') totalHoursText!: ElementRef<HTMLElement>;
+  @ViewChildren('progressText') progressText!: ElementRef<HTMLElement>[];
+
   public lastUpdate = '01/01/2023';
 
   public warningTextCode = {
@@ -32,20 +42,37 @@ export class SkillsComponent {
       color: '#E34F26',
     },
     {
-      language: 'SCSS',
-      recordedHours: 40,
-      //scss color
-      color: '#CC6699',
-    },
-    {
       language: 'C#',
       recordedHours: 50,
       //C# color
       color: '#239120',
     },
+    {
+      language: 'SCSS',
+      recordedHours: 40,
+      //scss color
+      color: '#CC6699',
+    },
   ];
 
   constructor(public lang: LanguageService) {}
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.skillsContainer.nativeElement.style.width = '100%';
+      this.skillsContainer.nativeElement.style.transitionDuration = '1.5s';
+
+      this.totalHoursText.nativeElement.style.opacity = '1';
+      this.totalHoursText.nativeElement.style.transform = 'translateX(0rem)';
+
+      this.progressText.forEach((progressText, index) => {
+        setTimeout(() => {
+          progressText.nativeElement.style.opacity = '1';
+          progressText.nativeElement.style.transform = 'translateX(0rem)';
+        }, (index + 1) * 400);
+      });
+    }, 1);
+  }
 
   public titleTxt() {
     return this.lang.languageSensitiveText({
