@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component } from '@angular/core';
 import { LanguageService } from './services/language.service';
 
@@ -5,6 +12,12 @@ import { LanguageService } from './services/language.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('animateDestroy', [
+      state('void', style({ opacity: '0' })),
+      transition('* => void', animate('500ms ease')),
+    ]),
+  ],
 })
 export class AppComponent {
   public darkMode: { strategy: 'class' | 'media'; enabled: boolean } = {
@@ -39,8 +52,8 @@ export class AppComponent {
 
   public footerTopRightTxt() {
     return this._lang.languageSensitiveText({
-      en: 'Built with Angular 15 and Tailwind CSS 3.2.4 ',
-      it: 'Sviluppato con Angular 15 e Tailwind CSS 3.2.4',
+      en: 'Built with Angular 15.0.0 and Tailwind CSS 3.2.4 ',
+      it: 'Sviluppato con Angular 15.0.0 e Tailwind CSS 3.2.4',
     });
   }
 

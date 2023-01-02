@@ -12,20 +12,35 @@
   "
 >
   <div class="w-full flex justify-between flex-wrap z-10 space-y-2">
-    <div>
+    <div class="relative">
       <div class="code code-left smooth w-40" [title]="imgText.open">
         {{ imgText.open }}
       </div>
       <img
         src="/assets/me.webp"
-        class="w-40 h-40 rounded-full object-cover shadow"
+        class="
+          w-40
+          h-40
+          rounded-full
+          object-cover
+          shadow
+          animate__fadeIn animate__animated
+          duration-[5s]
+        "
       />
+      <div class="img-ring blob blob-ring border-colors"></div>
+      <div
+        class="img-ring blob blob-ring border-colors rotate-90 scale-110"
+      ></div>
+      <div
+        class="img-ring blob blob-ring border-colors -rotate-45 -z-[1]"
+      ></div>
       <div class="code code-left smooth">
         {{ imgText.close }}
       </div>
     </div>
     <div>
-      <app-title [title]="aboutMe()"></app-title>
+      <app-title [title]="aboutMe"></app-title>
     </div>
   </div>
   <div class="space-y-4 text-end mt-4 lg:mt-10">
@@ -34,7 +49,7 @@
         {{ paragraphTxt.open }}
       </div>
       <p class="drop-shadow-md" id="p">
-        {{ descriptionTxt() }}
+        {{ descriptionTxt }}
       </p>
       <div class="code smooth">{{ paragraphTxt.close }}</div>
     </div>
@@ -42,21 +57,21 @@
     <div>
       <div class="code smooth">{{ paragraphTxt.open }}</div>
       <p class="drop-shadow-md">
-        {{ childhoodTxt() }}
+        {{ childhoodTxt }}
       </p>
       <div class="code smooth">{{ paragraphTxt.close }}</div>
     </div>
     <div>
       <div class="code smooth">{{ paragraphTxt.open }}</div>
       <p class="drop-shadow-md">
-        {{ pastExperiencesTxt() }}
+        {{ pastExperiencesTxt }}
       </p>
       <div class="code smooth">{{ paragraphTxt.close }}</div>
     </div>
 
     <div>
       <div class="code smooth">{{ paragraphTxt.open }}</div>
-      <p class="drop-shadow-md">{{ timeOffTxt() }}</p>
+      <p class="drop-shadow-md">{{ timeOffTxt }}</p>
       <div class="code smooth">{{ paragraphTxt.close }}</div>
     </div>
   </div>

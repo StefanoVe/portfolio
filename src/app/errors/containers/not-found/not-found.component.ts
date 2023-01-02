@@ -12,7 +12,7 @@ export class NotFoundComponent {
 
   public notFoundTxt() {
     return this._lang.languageSensitiveText({
-      en: 'Are you lost?',
+      en: "Can't find the way back?",
       it: 'Non trovi più la strada?',
     });
   }

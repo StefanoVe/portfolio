@@ -1,0 +1,18 @@
+.table-hader {
+    @apply p-4 backdrop-blur 
+}
+
+
+.svg-icon {
+    @apply w-24 h-24
+}
+
+
+tbody > tr
+{
+    @apply flex flex-col flex-nowrap lg:table-row w-full
+}
+
+tr > td {
+    @apply p-4 
+}

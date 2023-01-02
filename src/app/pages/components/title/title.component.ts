@@ -50,7 +50,7 @@ export class TitleComponent implements AfterViewInit, OnDestroy {
   private _handleFocus() {
     const fragment = this.route.snapshot.fragment;
 
-    if (!fragment || !fragment.includes('title')) {
+    if (!fragment || !fragment.includes('t')) {
       return;
     }
 

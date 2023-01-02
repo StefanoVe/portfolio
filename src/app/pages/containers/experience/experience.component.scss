@@ -7,6 +7,8 @@
     @apply  flex  w-full  ;
 }
 
+
+
 .event-content
 {
 @apply   xl:p-10 space-y-2 max-w-[80%] xl:max-w-[50%];
@@ -16,7 +18,6 @@
     }
 
     & > p {
-
         @apply  font-medium ;
     }
 
@@ -28,4 +29,30 @@
 
 .event-right {
     @apply xl:justify-end text-end xl:text-left 
+}
+
+.float {
+    	animation: float 6s ease-in-out infinite;
+        animation-direction: alternate;
+
+        &.float-slow {
+            animation-duration: 7s;
+        }
+
+        
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0rem);
+        
+	}
+	50% {
+		transform: translatey(0.5rem);
+        
+	}
+	100% {
+		transform: translatey(0rem);
+        
+	}
 }

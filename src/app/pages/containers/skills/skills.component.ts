@@ -15,7 +15,7 @@ import { LanguageService } from 'src/app/services/language.service';
 export class SkillsComponent implements AfterViewInit {
   @ViewChild('skillsContainer') skillsContainer!: ElementRef<HTMLElement>;
   @ViewChild('totalHoursText') totalHoursText!: ElementRef<HTMLElement>;
-  @ViewChildren('progressText') progressText!: ElementRef<HTMLElement>[];
+  @ViewChildren('progressText') progressTexts!: ElementRef<HTMLElement>[];
 
   public lastUpdate = '01/01/2023';
 
@@ -36,7 +36,7 @@ export class SkillsComponent implements AfterViewInit {
       color: '#007ACC',
     },
     {
-      language: 'HTML',
+      language: 'HTML + Tailwind',
       recordedHours: 700,
       //html5 color
       color: '#E34F26',
@@ -59,29 +59,21 @@ export class SkillsComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.skillsContainer.nativeElement.style.width = '100%';
-      this.skillsContainer.nativeElement.style.transitionDuration = '1.5s';
+      this._skillsContainerTransition();
+      this._totalHoursTextTransition();
 
-      this.totalHoursText.nativeElement.style.opacity = '1';
-      this.totalHoursText.nativeElement.style.transform = 'translateX(0rem)';
-
-      this.progressText.forEach((progressText, index) => {
-        setTimeout(() => {
-          progressText.nativeElement.style.opacity = '1';
-          progressText.nativeElement.style.transform = 'translateX(0rem)';
-        }, (index + 1) * 400);
-      });
+      this._progressTextsTransition();
     }, 1);
   }
 
-  public titleTxt() {
+  public get titleTxt() {
     return this.lang.languageSensitiveText({
       en: 'Skills',
       it: 'Abilità',
     });
   }
 
-  public lastUpdateTxt() {
+  public get lastUpdateTxt() {
     return this.lang.languageSensitiveText({
       en: 'Last update on',
       it: 'Ultimo aggiornamento il',
@@ -96,17 +88,35 @@ export class SkillsComponent implements AfterViewInit {
     return (recordedHours / this.totalHours()) * 100;
   }
 
-  public totalHoursTxt() {
+  public get totalHoursTxt() {
     return this.lang.languageSensitiveText({
       en: 'Total hours spent coding',
       it: 'Ore totali passate a programmare',
     });
   }
 
-  public warningTxt() {
+  public get warningTxt() {
     return this.lang.languageSensitiveText({
       it: "Dati approssimativi, basati sull'esperienza lavorativa e WakkaTime",
       en: 'Approximate data, based on professional experience and WakkaTime',
+    });
+  }
+
+  private _skillsContainerTransition() {
+    this.skillsContainer.nativeElement.style.width = '100%';
+    this.skillsContainer.nativeElement.style.transitionDuration = '1.5s';
+  }
+  private _totalHoursTextTransition() {
+    this.totalHoursText.nativeElement.style.opacity = '1';
+    this.totalHoursText.nativeElement.style.transform = 'translateY(0rem)';
+  }
+
+  private _progressTextsTransition() {
+    this.progressTexts.forEach((progressText, index) => {
+      setTimeout(() => {
+        progressText.nativeElement.style.opacity = '1';
+        progressText.nativeElement.style.transform = 'translateX(0rem)';
+      }, (index + 1) * 400);
     });
   }
 }

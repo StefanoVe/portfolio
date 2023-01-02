@@ -9,21 +9,21 @@ import { LanguageService } from 'src/app/services/language.service';
 export class LandingComponent {
   constructor(private _lang: LanguageService) {}
 
-  public HelloTxt() {
+  public get HelloTxt() {
     return this._lang.languageSensitiveText({
       en: 'Hello World!',
       it: 'Ciao Mondo!',
     });
   }
 
-  public ImTxt() {
+  public get ImTxt() {
     return this._lang.languageSensitiveText({
       en: "I'm",
       it: 'Mi chiamo',
     });
   }
 
-  public SubtitleTxt() {
+  public get SubtitleTxt() {
     return this._lang.languageSensitiveText({
       en: 'a full-stack web developer based in Italy 🇮🇹!',
       it: 'e sono un developer full-stack italiano 🇮🇹!',

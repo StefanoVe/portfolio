@@ -28,7 +28,21 @@ export class NavComponent implements OnInit, OnDestroy {
                   it: 'Su di me',
                 }),
                 routerPath: '/about',
-                fragment: 'title',
+              },
+
+              {
+                label: this.lang.languageSensitiveText({
+                  en: 'Experience',
+                  it: 'Esperienza',
+                }),
+                routerPath: '/experience',
+              },
+              {
+                label: this.lang.languageSensitiveText({
+                  en: 'Skills',
+                  it: 'Abilità',
+                }),
+                routerPath: '/skills',
               },
               {
                 label: this.lang.languageSensitiveText({
@@ -39,29 +53,12 @@ export class NavComponent implements OnInit, OnDestroy {
               },
               {
                 label: this.lang.languageSensitiveText({
-                  en: 'Experience',
-                  it: 'Esperienza',
-                }),
-                routerPath: '/experience',
-                fragment: 'title',
-              },
-              {
-                label: this.lang.languageSensitiveText({
-                  en: 'Skills',
-                  it: 'Abilità',
-                }),
-                routerPath: '/skills',
-                fragment: 'title',
-              },
-              {
-                label: this.lang.languageSensitiveText({
                   en: 'Contact',
                   it: 'Contattami',
                 }),
-                routerPath: '/contacts',
-                fragment: 'title',
+                routerPath: '/contact',
               },
-            ])
+            ].map((i) => ({ ...i, fragment: 't' })))
         )
       )
       .subscribe();

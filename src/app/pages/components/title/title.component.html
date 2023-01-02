@@ -1,5 +1,8 @@
-<div class="font-syne">
-  <div class="code smooth max-w-xs" [title]="h1Txt.open">
+<div class="font-syne animate__fadeInDown animate__animated">
+  <div
+    class="code smooth max-w-xs text-gray-600 dark:text-white"
+    [title]="h1Txt.open"
+  >
     {{ h1Txt.open }}
   </div>
   <div class="flex justify-end" #titleRef>
@@ -16,12 +19,13 @@
         bg-clip-text bg-gradient-to-r
         from-blue-400
         to-purple-600
+        animate__fadeInDown animate__animated
       "
     >
       {{ title }}
     </h1>
   </div>
-  <div class="code smooth">
+  <div class="code smooth text-gray-600 dark:text-white">
     {{ h1Txt.close }}
   </div>
 </div>
