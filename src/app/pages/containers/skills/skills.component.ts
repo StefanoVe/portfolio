@@ -109,6 +109,7 @@ export class SkillsComponent implements AfterViewInit {
   private _totalHoursTextTransition() {
     this.totalHoursText.nativeElement.style.opacity = '1';
     this.totalHoursText.nativeElement.style.transform = 'translateY(0rem)';
+    this.totalHoursText.nativeElement.style.transitionDuration = '300ms ';
   }
 
   private _progressTextsTransition() {
@@ -118,5 +119,11 @@ export class SkillsComponent implements AfterViewInit {
         progressText.nativeElement.style.transform = 'translateX(0rem)';
       }, (index + 1) * 400);
     });
+
+    setTimeout(() => {
+      this.progressTexts.forEach((progressText, index) => {
+        progressText.nativeElement.style.transitionDuration = '300ms';
+      });
+    }, 1000);
   }
 }

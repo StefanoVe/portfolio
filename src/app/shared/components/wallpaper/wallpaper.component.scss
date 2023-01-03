@@ -1,21 +1,5 @@
 
 
-.fade-away {
-    @apply bg-mobile-wallpaper lg:bg-cover  pointer-events-none bg-top bg-no-repeat z-0;
-
-
-
-    &.fa-dark {
-         background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 50%,rgb(31 41 55) 100%), url("/assets/AI/landing-dm.webp");
-         @apply saturate-[1.2] brightness-75 
-    }
-
-    &.fa-light {
-        background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,rgba(255,153,153,0) 50%,rgb(153	118	5	) 100%), url("/assets/AI/wp-lm-3.webp");
-        background-position: center;
-    }
-}
-
 
 
 

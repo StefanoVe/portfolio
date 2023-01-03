@@ -20,7 +20,7 @@
 
 
 .border-colors {
-    @apply border-gray-200 dark:border-slate-500
+    @apply border-gray-100 dark:border-slate-500
 }
 
 
@@ -58,7 +58,7 @@
     @apply overflow-hidden bg-center bg-cover;
     
   &.blob-ring {
-    @apply w-full border absolute transition-all duration-300 ease-in-out transform-gpu outline-none right-0 border-gray-400 
+    @apply w-full border absolute transition-all duration-300 ease-in-out transform-gpu outline-none right-0 border-white/50 dark:border-slate-500/50;
   }
 }
 
