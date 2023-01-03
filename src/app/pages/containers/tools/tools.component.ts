@@ -18,8 +18,8 @@ export class ToolsComponent {
 
   public get description() {
     return this._lang.languageSensitiveText({
-      en: 'Here are the tools I am most familiar with at the moment.',
-      it: 'Questi sono i softwares con cui sono più familiare al momento.',
+      en: 'Here are the tools I am most familiar with at the moment; Starting from the front-end, up to the operating systems.',
+      it: 'Questi sono i softwares con cui sono più familiare al momento; Partendo dal front-end, fino ad arrivare ai sistemi operativi.',
     });
   }
 }

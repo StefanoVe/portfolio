@@ -43,7 +43,7 @@ export class SkillsComponent implements AfterViewInit {
     },
     {
       language: 'C#',
-      recordedHours: 50,
+      recordedHours: 140,
       //C# color
       color: '#239120',
     },
