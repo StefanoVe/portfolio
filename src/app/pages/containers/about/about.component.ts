@@ -23,8 +23,8 @@ export class AboutComponent {
 
   public get descriptionTxt() {
     return this._lang.languageSensitiveText({
-      en: `I'm an Italian 🇮🇹, ${this._age} year old, full stack developer.`,
-      it: `Sono un developer Full Stack italiano 🇮🇹, di ${this._age} anni.`,
+      en: `I'm an Italian 🇮🇹, ${this._age} year old, full stack web developer.`,
+      it: `Sono un developer web full stack Italiano 🇮🇹, di ${this._age} anni.`,
     });
   }
 
