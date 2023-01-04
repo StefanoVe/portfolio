@@ -31,7 +31,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-white/20 animate__fadeInDown animate__animated"
+            class="w-6 h-6 animate__fadeInDown animate__animated"
           >
             <path
               stroke-linecap="round"
@@ -54,7 +54,7 @@
           [ngClass]="i % 2 === 0 ? 'flex-row' : 'xl:flex-row-reverse'"
         >
           <app-personal-icon
-            class="w-8 h-8 dark:text-yellow-500 text-yellow-300"
+            class="w-8 h-8"
             [title]="sideProjectTxt()"
             *ngIf="event.isSideProject"
           >
