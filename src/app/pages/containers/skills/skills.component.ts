@@ -75,7 +75,7 @@ export class SkillsComponent implements AfterViewInit {
 
   public get lastUpdateTxt() {
     return this.lang.languageSensitiveText({
-      en: 'Last update on',
+      en: 'Latest update on',
       it: 'Ultimo aggiornamento il',
     });
   }
