@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivationEnd, Router } from '@angular/router';
 import { combineLatest, tap } from 'rxjs';
 import { LanguageService } from './services/language.service';
 
@@ -31,13 +31,30 @@ export class AppComponent {
   constructor(
     private _lang: LanguageService,
     private _meta: Meta,
-    private _route: ActivatedRoute,
-    private _title: Title
+    private _title: Title,
+    private _router: Router
   ) {
-    combineLatest([this._lang.currentLanguage$, this._route.data])
+    let latestEvent: ActivationEnd;
+
+    combineLatest([this._lang.currentLanguage$, this._router.events])
       .pipe(
-        tap(([lang, r]) => {
-          this._title.setTitle('Stefano Vecchietti ' + r[`title_${lang}`]);
+        tap(([lang, event]) => {
+          if (event instanceof ActivationEnd) {
+            if (!Object.keys(event.snapshot.data).length) {
+              return;
+            }
+            latestEvent = event;
+          }
+
+          if (!latestEvent) {
+            return;
+          }
+
+          const r = latestEvent.snapshot.data;
+
+          this._title.setTitle(
+            'Stefano Vecchietti - ' + r[`title_${lang}`] || ''
+          );
           this._meta.updateTag({
             name: 'description',
             content: r[`description_${lang}`],
@@ -49,7 +66,7 @@ export class AppComponent {
     this._meta.updateTag({
       name: 'keywords',
       content:
-        'web development, HTML, CSS, JavaScript, Angular, React, Vue, PHP, Node.js, front-end development, back-end development, full-stack development, responsive design, user experience, UX design',
+        'portfolio, web development, HTML, CSS, JavaScript, Angular, React, Node.js, front-end development, back-end development, full-stack development, responsive design, user experience, UX design',
     });
   }
 
