@@ -14,7 +14,7 @@ export class LanguageService {
   private _currentLang =
     (localStorage.getItem(LS_LANGUAGE) as EnumAvailableLanguages) ||
     EnumAvailableLanguages.English;
-  public languageChanges = new BehaviorSubject<EnumAvailableLanguages>(
+  public currentLanguage$ = new BehaviorSubject<EnumAvailableLanguages>(
     this._currentLang
   );
 
@@ -27,7 +27,7 @@ export class LanguageService {
   public set currentLang(lang: EnumAvailableLanguages) {
     localStorage.setItem(LS_LANGUAGE, lang);
     this._currentLang = lang;
-    this.languageChanges.next(lang);
+    this.currentLanguage$.next(lang);
   }
 
   public languageSensitiveText(text: { en: string; it: string }) {

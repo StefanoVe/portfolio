@@ -6,6 +6,9 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
+import { combineLatest, tap } from 'rxjs';
 import { LanguageService } from './services/language.service';
 
 @Component({
@@ -25,7 +28,27 @@ export class AppComponent {
     enabled: true,
   };
 
-  constructor(private _lang: LanguageService) {}
+  constructor(
+    private _lang: LanguageService,
+    private _meta: Meta,
+    private _route: ActivatedRoute,
+    private _title: Title
+  ) {
+    combineLatest([this._lang.currentLanguage$, this._route.data]).pipe(
+      tap(([lang, r]) => {
+        this._title.setTitle(r[`title_${lang}`]);
+        this._meta.updateTag({
+          name: 'description',
+          content: r[`description_${lang}`],
+        });
+      })
+    );
+    this._meta.updateTag({
+      name: 'keywords',
+      content:
+        'web development, HTML, CSS, JavaScript, Angular, React, Vue, PHP, Node.js, front-end development, back-end development, full-stack development, responsive design, user experience, UX design',
+    });
+  }
 
   public bootstrapDarkMode() {
     const hasDarkModeVar = localStorage.getItem('darkMode');

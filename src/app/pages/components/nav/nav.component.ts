@@ -16,7 +16,7 @@ export class NavComponent implements OnInit, OnDestroy {
   constructor(private lang: LanguageService) {}
 
   ngOnInit(): void {
-    this.lang.languageChanges
+    this.lang.currentLanguage$
       .pipe(
         takeUntil(this.destroy$),
         tap(
