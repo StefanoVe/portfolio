@@ -36,7 +36,7 @@ export class AppComponent {
   ) {
     combineLatest([this._lang.currentLanguage$, this._route.data]).pipe(
       tap(([lang, r]) => {
-        this._title.setTitle(r[`title_${lang}`]);
+        this._title.setTitle('Stefano Vecchietti ' + r[`title_${lang}`]);
         this._meta.updateTag({
           name: 'description',
           content: r[`description_${lang}`],
