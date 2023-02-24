@@ -15,7 +15,7 @@ export class AboutComponent {
   };
 
   public imgText = {
-    open: '<img src="/assets/me.webp" class="w-40 h-40 rounded-full object-cover">',
+    open: '<img src="/assets/me.webp" alt="a picture of me" class="w-40 h-40 rounded-full object-cover">',
     close: '</img>',
   };
 
