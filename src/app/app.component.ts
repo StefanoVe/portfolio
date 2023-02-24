@@ -34,15 +34,18 @@ export class AppComponent {
     private _route: ActivatedRoute,
     private _title: Title
   ) {
-    combineLatest([this._lang.currentLanguage$, this._route.data]).pipe(
-      tap(([lang, r]) => {
-        this._title.setTitle('Stefano Vecchietti ' + r[`title_${lang}`]);
-        this._meta.updateTag({
-          name: 'description',
-          content: r[`description_${lang}`],
-        });
-      })
-    );
+    combineLatest([this._lang.currentLanguage$, this._route.data])
+      .pipe(
+        tap(([lang, r]) => {
+          this._title.setTitle('Stefano Vecchietti ' + r[`title_${lang}`]);
+          this._meta.updateTag({
+            name: 'description',
+            content: r[`description_${lang}`],
+          });
+        })
+      )
+      .subscribe();
+
     this._meta.updateTag({
       name: 'keywords',
       content:
