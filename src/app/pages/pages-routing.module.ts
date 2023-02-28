@@ -79,8 +79,10 @@ const routes: Routes = [
     data: {
       title_en: 'Contact',
       title_it: 'Contattami',
-      description_en: 'This is the contact page',
-      description_it: 'Questa è la pagina di contatto',
+      description_en:
+        'Discover my contact information and how to get in touch with me.',
+      description_it:
+        ' Scopri le mie informazioni di contatto e come mettersi in contatto con me.',
     },
   },
 ];
