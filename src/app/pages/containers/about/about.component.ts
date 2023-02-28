@@ -7,7 +7,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  public birthDate = new Date(1999, 2, 27);
+  public birthDate = new Date(1999, 1, 27);
 
   public paragraphTxt = {
     open: '<p class="drop-shadow-md">',
