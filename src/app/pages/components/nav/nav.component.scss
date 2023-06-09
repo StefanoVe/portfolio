@@ -1,19 +1,15 @@
 .nav {
-    
-    @apply font-mono-display text-2xl text-right ;
+  @apply font-mono-display text-2xl text-right;
 
-    & .nav-option {
-        @apply translate-x-0 whitespace-nowrap my-2 cursor-pointer px-4  ;
-
-      
-    }
+  & .nav-option {
+    @apply translate-x-0 whitespace-nowrap my-2 cursor-pointer px-4;
+  }
 }
 
 .active {
-    @apply   whitespace-nowrap  cursor-pointer  pointer-events-none uppercase ;
+  @apply whitespace-nowrap  cursor-pointer  pointer-events-none uppercase;
 }
 
-
 .earth-active {
-    @apply bg-blue-500/20 brightness-[1.6] pointer-events-none scale-110 
+  @apply bg-blue-500/20 brightness-[1.6] pointer-events-none scale-110;
 }

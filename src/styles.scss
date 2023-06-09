@@ -1,89 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Amatic+SC&family=Major+Mono+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&family=Amatic+SC&family=Major+Mono+Display&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'animate.css/animate.min';
+@import "animate.css/animate.min";
 
+@layer base {
+  @font-face {
+    font-family: "Velodroma Basic";
+    src: url(./assets/fonts/VelodromaBasic-Regular.otf) format("otf");
+  }
+}
 
 .center {
-    @apply flex text-center justify-center;
+  @apply flex text-center justify-center;
 
-    &.vertical {
-        @apply  flex-col 
-    }
+  &.vertical {
+    @apply flex-col;
+  }
 
-    &.vertical-reversed {
-        @apply  flex-col-reverse 
-    }
+  &.vertical-reversed {
+    @apply flex-col-reverse;
+  }
 }
-
-
 
 .border-colors {
-    @apply border-gray-300 dark:border-slate-500
+  @apply border-gray-300 dark:border-slate-500;
 }
 
-
 .widget {
-    @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer bg-white/20 dark:bg-slate-500/20 p-2 transition-all ease-in-out hover:scale-95 duration-200 hover:brightness-95 dark:hover:brightness-150 border border-colors backdrop-blur-3xl dark:backdrop-brightness-90;
+  @apply w-[15rem] h-[8.5rem] rounded-xl shadow-sm cursor-pointer bg-white/20 dark:bg-slate-500/20 p-2 transition-all ease-in-out hover:scale-95 duration-200 hover:brightness-95 dark:hover:brightness-150 border border-colors backdrop-blur-3xl dark:backdrop-brightness-90;
 
-    & .logo {
-        @apply object-contain h-7 mt-4
-    }
+  & .logo {
+    @apply object-contain h-7 mt-4;
+  }
 
-    & .pfp {
-        @apply h-14 w-14 object-contain rounded-full shadow-md
-    }
-
-    
+  & .pfp {
+    @apply h-14 w-14 object-contain rounded-full shadow-md;
+  }
 }
 
 .horizontal-flip {
- --tw-scale-x: -1;
+  --tw-scale-x: -1;
 }
 
-
 .smooth {
-    
-    @apply transition-all duration-300 ease-in-out   
+  @apply transition-all duration-300 ease-in-out;
 }
 
 .default-background {
-    @apply bg-gray-50 dark:bg-gray-800
+  @apply bg-gray-50 dark:bg-gray-800;
 }
 
 .blob {
-    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-    animation: blob 9s linear infinite;
-    @apply overflow-hidden bg-center bg-cover;
-    
+  border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  animation: blob 9s linear infinite;
+  @apply overflow-hidden bg-center bg-cover;
+
   &.blob-ring {
     @apply w-full border absolute transition-all duration-300 ease-in-out transform-gpu outline-none right-0 border-gray-400/50 dark:border-slate-100/50;
   }
 }
 
-  @keyframes blob {
-    0%, 100% {
-        border-radius:
-            42% 56% 72% 28% / 42% 42% 56% 48%;
-    }
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  }
 
-    33% {
-        border-radius:
-            42% 28% 48% 48% / 28% 28% 72% 72%;
-    }
+  33% {
+    border-radius: 42% 28% 48% 48% / 28% 28% 72% 72%;
+  }
 
-    66% {
-        border-radius:
-            100% 26% 56% 100% / 100% 100% 56% 56%;
-    }
+  66% {
+    border-radius: 100% 26% 56% 100% / 100% 100% 56% 56%;
+  }
 }
 
-
 .code {
-    @apply text-end opacity-[40%] truncate text-xs backdrop-blur-lg rounded;
+  @apply text-end opacity-[40%] truncate text-xs backdrop-blur-lg rounded;
 
-    &.code-left {
-        @apply text-start;
-    }
+  &.code-left {
+    @apply text-start;
+  }
 }

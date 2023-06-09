@@ -7,6 +7,7 @@ module.exports = {
         syne: ["Syne Mono", "sans-serif"],
         amatic: ["Amatic SC", "cursive"],
         "mono-display": ["Major Mono Display", "monospace"],
+        velodroma: ["Velodroma Basic", "sans-serif"],
       },
       backgroundSize: {
         "mobile-wallpaper": "70rem",
