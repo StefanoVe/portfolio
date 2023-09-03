@@ -20,7 +20,7 @@ export class ExperienceComponent {
           en: 'Full Stack Web Developer',
           it: 'Sviluppatore Web full stack',
         }),
-        dates: { from: new Date('2021-09-20'), to: new Date() },
+        dates: { from: new Date('2021-09-20'), to: new Date('2023-09-01') },
         description: this._lang.languageSensitiveText({
           it: `Sviluppo e mantenimento di vari servizi interni ed esterni per Golden Italia ed i brand ad essa collegati,
           Utilizzando la MEAN stack (Express e MongoDB per lo sviluppo del backend e Angular e TailwindCSS per lo sviluppo del frontend).
