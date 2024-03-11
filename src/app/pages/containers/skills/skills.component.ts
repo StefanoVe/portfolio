@@ -17,7 +17,7 @@ export class SkillsComponent implements AfterViewInit {
   @ViewChild('totalHoursText') totalHoursText!: ElementRef<HTMLElement>;
   @ViewChildren('progressText') progressTexts!: ElementRef<HTMLElement>[];
 
-  public lastUpdate = '01/01/2023';
+  public lastUpdate = '11/03/2024';
 
   public warningTextCode = {
     open: `<p class="my-8 text-lg text-end">`,
@@ -31,13 +31,13 @@ export class SkillsComponent implements AfterViewInit {
   }[] = [
     {
       language: 'TypeScript',
-      recordedHours: 1200,
+      recordedHours: 1800,
       //typescript color
       color: '#007ACC',
     },
     {
       language: 'HTML + Tailwind',
-      recordedHours: 700,
+      recordedHours: 1400,
       //html5 color
       color: '#E34F26',
     },
@@ -49,7 +49,7 @@ export class SkillsComponent implements AfterViewInit {
     },
     {
       language: 'SCSS',
-      recordedHours: 40,
+      recordedHours: 180,
       //scss color
       color: '#CC6699',
     },
