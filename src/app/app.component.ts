@@ -95,8 +95,8 @@ export class AppComponent {
 
   public footerTopRightTxt() {
     return this._lang.languageSensitiveText({
-      en: 'Built with Angular 15.0.0 and Tailwind CSS 3.2.4 ',
-      it: 'Sviluppato con Angular 15.0.0 e Tailwind CSS 3.2.4',
+      en: 'Built with Angular 15 to 17 and Tailwind CSS 3.2.4 ',
+      it: 'Sviluppato con Angular (da 15 a 17) e Tailwind CSS 3.2.4',
     });
   }
 
