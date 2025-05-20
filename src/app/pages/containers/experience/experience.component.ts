@@ -21,7 +21,7 @@ export class ExperienceComponent {
           en: 'CTO / Co Founder',
           it: 'CTO / Co Fondatore',
         }),
-        dates: { from: new Date('2023-11-01'), to: new Date() },
+        dates: { from: new Date('2023-11-01'), to: new Date('2025-02-28') },
         description: this._lang.languageSensitiveText({
           it: `Guido lo sviluppo di Notify, un biglietto da visita smart progettato per semplificare il prospecting negli spazi di coworking. Come co-fondatore dell’azienda e CTO, introduco tecnologie innovative per portare Notify sul mercato con successo. Lavorando a stretto contatto con i miei co-fondatori, contribuisco a definire strategie e raggiungere gli obiettivi aziendali, mettendo in campo leadership e competenze tecniche per far crescere l’azienda.`,
           en: `I am leading the development of Notify, a smart business card designed to simplify prospecting in coworking spaces. As a co-founder of the company and CTO, I am introducing innovative technologies to successfully bring Notify to market. Working closely with my co-founders, I am contributing to defining strategies and achieving business goals, applying leadership and technical skills to grow the company.`,
