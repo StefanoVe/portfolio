@@ -19,14 +19,16 @@
           ></app-toggle-language>
         </div>
 
-        <div class="h-full overflow-y-visible">
+        <div
+          class="h-full overflow-y-visible flex flex-col lg:flex-row lg:items-start"
+        >
           <div
             class="h-full w-full lg:h-full lg:w-3/12 z-10 center lg:fixed -right-10 flex justify-end"
           >
             <app-nav></app-nav>
           </div>
           <div
-            class="h-full w-full lg:w-8/12 2xl:w-9/12 xl:border-r border-colors my-10 xl:mt-0 p-4 z-10"
+            class="h-full w-full lg:w-8/12 2xl:w-9/12 my-10 xl:mt-0 p-4 z-10"
           >
             <router-outlet></router-outlet>
           </div>

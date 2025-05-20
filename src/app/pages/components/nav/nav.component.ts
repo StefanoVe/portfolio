@@ -8,8 +8,12 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit, OnDestroy {
-  public navItems: { label: string; routerPath: string; fragment?: string }[] =
-    [];
+  public navItems: {
+    label: string;
+    routerPath: string;
+    fragment?: string;
+    spacing: number;
+  }[] = [];
 
   private destroy$ = new Subject<void>();
 
@@ -27,6 +31,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   en: 'About',
                   it: 'Su di me',
                 }),
+                spacing: 0,
                 routerPath: '/about',
               },
 
@@ -35,6 +40,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   en: 'Experience',
                   it: 'Esperienza',
                 }),
+                spacing: 16,
                 routerPath: '/experience',
               },
               {
@@ -42,6 +48,7 @@ export class NavComponent implements OnInit, OnDestroy {
                   en: 'Skills',
                   it: 'Abilità',
                 }),
+                spacing: 32,
                 routerPath: '/skills',
               },
               {
@@ -49,13 +56,23 @@ export class NavComponent implements OnInit, OnDestroy {
                   en: 'Tools',
                   it: 'Strumenti',
                 }),
+                spacing: 32,
                 routerPath: '/tools',
+              },
+              {
+                label: this.lang.languageSensitiveText({
+                  en: 'Photography',
+                  it: 'Fotografia',
+                }),
+                spacing: 16,
+                routerPath: '/photography',
               },
               {
                 label: this.lang.languageSensitiveText({
                   en: 'Contact',
                   it: 'Contattami',
                 }),
+                spacing: 0,
                 routerPath: '/contact',
               },
             ].map((i) => ({ ...i, fragment: 't' })))

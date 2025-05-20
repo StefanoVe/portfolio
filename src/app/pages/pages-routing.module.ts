@@ -4,6 +4,7 @@ import { AboutComponent } from './containers/about/about.component';
 import { ContactComponent } from './containers/contact/contact.component';
 import { ExperienceComponent } from './containers/experience/experience.component';
 import { LandingComponent } from './containers/landing/landing.component';
+import { PhotosComponent } from './containers/photos/photos.component';
 import { SkillsComponent } from './containers/skills/skills.component';
 import { ToolsComponent } from './containers/tools/tools.component';
 
@@ -83,6 +84,18 @@ const routes: Routes = [
         'Discover my contact information and how to get in touch with me.',
       description_it:
         ' Scopri le mie informazioni di contatto e come mettersi in contatto con me.',
+    },
+  },
+  {
+    path: 'photography',
+    component: PhotosComponent,
+    data: {
+      title_en: 'Photography',
+      title_it: 'Fotografia',
+      description_en:
+        'Explore my photography portfolio, showcasing my skills in capturing stunning images. Discover my approach to photography and how I can help you create beautiful visuals for your projects.',
+      description_it:
+        'Esplora il mio portfolio fotografico, che mostra le mie abilità nella cattura di immagini straordinarie. Scopri il mio approccio alla fotografia e come posso aiutarti a creare bellissimi contenuti visivi per i tuoi progetti.',
     },
   },
 ];

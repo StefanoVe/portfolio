@@ -1,15 +1,6 @@
 <nav class="h-[20rem] w-[30rem] relative">
   <div
-    class="
-      absolute
-      h-full
-      w-full
-      -right-[7.5rem]
-      md:-right-[5rem]
-      lg:-right-[0rem]
-      2xl:-right-[6rem]
-      smooth
-    "
+    class="absolute h-full w-full -right-[7.5rem] md:-right-[5rem] lg:-right-[0rem] 2xl:-right-[6rem] smooth"
   >
     <div class="flex h-full">
       <div class="center vertical">
@@ -27,7 +18,7 @@
             routerLinkActive="active smooth"
             [fragment]="item.fragment"
             [ngStyle]="{
-              transform: 'translateX(-' + handleRotation($value) + 'px)'
+              transform: 'translateX(-' + (item.spacing *2) + 'px)',
             }"
           >
             <ng-container [ngTemplateOutlet]="navHover"></ng-container>
@@ -37,14 +28,7 @@
       </div>
 
       <div
-        class="
-          h-full
-          w-full
-          mt-4
-          relative
-          group/earth
-          animate__fadeInRight animate__animated
-        "
+        class="h-full w-full mt-4 relative group/earth animate__fadeInRight animate__animated"
         style="animation-timing-function: cubic-bezier(0, 0, 0.2, 1)"
       >
         <img
@@ -53,27 +37,10 @@
           routerLinkActive="earth-active"
           fragment="title"
           src="/assets/AI/earth.webp"
-          class="
-            blob
-            h-full
-            w-full
-            object-cover
-            group-hover/earth:translate-x-[-4rem]
-            smooth
-            cursor-pointer
-            bg-white/10
-          "
+          class="blob h-full w-full object-cover group-hover/earth:translate-x-[-4rem] smooth cursor-pointer bg-white/10"
         />
         <span
-          class="
-            absolute
-            font-mono
-            text-lg
-            opacity-0
-            tracking-wider
-            group-hover/earth:translate-x-[-5rem] group-hover/earth:opacity-100
-            smooth
-          "
+          class="absolute font-mono text-lg opacity-0 tracking-wider group-hover/earth:translate-x-[-5rem] group-hover/earth:opacity-100 smooth"
           >{{ homeTxt() }}</span
         >
       </div>
@@ -84,52 +51,16 @@
 <ng-template #navHover>
   <div class="m-5">
     <div
-      class="
-        blob blob-ring
-        h-0
-        w-full
-        group-hover/nav-option:h-full
-        smooth
-        bottom-0
-        delay-150
-      "
+      class="blob blob-ring h-0 w-full group-hover/nav-option:h-full smooth bottom-0 delay-150"
     ></div>
     <div
-      class="
-        blob blob-ring
-        h-0
-        w-full
-        group-hover/nav-option:h-full
-        bottom-0
-        smooth
-        scale-110
-        delay-150
-        horizontal-flip
-        scale-y-[-1]
-      "
+      class="blob blob-ring h-0 w-full group-hover/nav-option:h-full bottom-0 smooth scale-110 delay-150 horizontal-flip scale-y-[-1]"
     ></div>
     <div
-      class="
-        blob blob-ring
-        h-0
-        w-full
-        group-hover/nav-option:h-full group-hover/nav-option:rotate-[5deg]
-        bottom-0
-        smooth
-        scale-110
-        horizontal-flip
-      "
+      class="blob blob-ring h-0 w-full group-hover/nav-option:h-full group-hover/nav-option:rotate-[5deg] bottom-0 smooth scale-110 horizontal-flip"
     ></div>
     <div
-      class="
-        blob blob-ring
-        h-0
-        w-full
-        group-hover/nav-option:h-full group-hover/nav-option:rotate-[-5deg]
-        bottom-0
-        smooth
-        scale-110
-      "
+      class="blob blob-ring h-0 w-full group-hover/nav-option:h-full group-hover/nav-option:rotate-[-5deg] bottom-0 smooth scale-110"
     ></div>
   </div>
 </ng-template>

@@ -9,6 +9,7 @@ import { AboutComponent } from './containers/about/about.component';
 import { ContactComponent } from './containers/contact/contact.component';
 import { ExperienceComponent } from './containers/experience/experience.component';
 import { LandingComponent } from './containers/landing/landing.component';
+import { PhotosComponent } from './containers/photos/photos.component';
 import { SkillsComponent } from './containers/skills/skills.component';
 import { ToolsComponent } from './containers/tools/tools.component';
 import { PagesRoutingModule } from './pages-routing.module';
@@ -23,6 +24,7 @@ import { PagesRoutingModule } from './pages-routing.module';
     SkillsComponent,
     ToolsComponent,
     ContactComponent,
+    PhotosComponent,
   ],
   imports: [CommonModule, PagesRoutingModule, WidgetsModule, SharedModule],
   exports: [NavComponent],
